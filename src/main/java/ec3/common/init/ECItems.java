@@ -13,8 +13,77 @@ import net.minecraftforge.common.util.EnumHelper;
 
 import ec3.api.ApiCore;
 import ec3.api.upgrades.MagicianTableUpgrades;
-import ec3.common.items.*;
-import ec3.common.templates.*;
+import ec3.common.items.BaublesAccessory;
+import ec3.common.items.ItemBaublesWearable;
+import ec3.common.items.ItemBiomeWand;
+import ec3.common.items.ItemBoundGem;
+import ec3.common.items.ItemCapturedSoul;
+import ec3.common.items.ItemChaosFork;
+import ec3.common.items.ItemCharm;
+import ec3.common.items.ItemCollectedMonsterSpawner;
+import ec3.common.items.ItemComputerArmor;
+import ec3.common.items.ItemComputerBoard;
+import ec3.common.items.ItemControlRod;
+import ec3.common.items.ItemCraftingFrame;
+import ec3.common.items.ItemDividerGun;
+import ec3.common.items.ItemDrop;
+import ec3.common.items.ItemElementalFocus;
+import ec3.common.items.ItemElementalSword;
+import ec3.common.items.ItemEmber;
+import ec3.common.items.ItemEmeraldHeart;
+import ec3.common.items.ItemEssence;
+import ec3.common.items.ItemEssentialFuel;
+import ec3.common.items.ItemFilter;
+import ec3.common.items.ItemFrostMace;
+import ec3.common.items.ItemGenericArmor;
+import ec3.common.items.ItemGenericEC;
+import ec3.common.items.ItemGun;
+import ec3.common.items.ItemHolyMace;
+import ec3.common.items.ItemInventoryGem;
+import ec3.common.items.ItemKnowledgeBook;
+import ec3.common.items.ItemLifeStaff;
+import ec3.common.items.ItemLiquidAir;
+import ec3.common.items.ItemMRUMatrixProjection;
+import ec3.common.items.ItemMRUMover;
+import ec3.common.items.ItemMRUStorageNBTTag;
+import ec3.common.items.ItemMagicLantern;
+import ec3.common.items.ItemMagicalAlloy;
+import ec3.common.items.ItemMagicalBuilder;
+import ec3.common.items.ItemMagicalChisel;
+import ec3.common.items.ItemMagicalDigger;
+import ec3.common.items.ItemMagicalPorkchop;
+import ec3.common.items.ItemMagicalShield;
+import ec3.common.items.ItemMagicalWater;
+import ec3.common.items.ItemMagicalWings;
+import ec3.common.items.ItemMagmaticWand;
+import ec3.common.items.ItemMagnetizingStaff;
+import ec3.common.items.ItemMonocle;
+import ec3.common.items.ItemOrbitalRemote;
+import ec3.common.items.ItemPickaxeMod;
+import ec3.common.items.ItemPlayerList;
+import ec3.common.items.ItemRecordMod;
+import ec3.common.items.ItemSecret;
+import ec3.common.items.ItemShadeSlasher;
+import ec3.common.items.ItemShadeSword;
+import ec3.common.items.ItemShadowKnife;
+import ec3.common.items.ItemSoulScriber;
+import ec3.common.items.ItemSoulStone;
+import ec3.common.items.ItemSpawnEggEC;
+import ec3.common.items.ItemSpawnerCollector;
+import ec3.common.items.ItemSpikyShield;
+import ec3.common.items.ItemWindAxe;
+import ec3.common.items.ItemWindHoe;
+import ec3.common.items.ItemWindKeeper;
+import ec3.common.items.ItemWindPickaxe;
+import ec3.common.items.ItemWindShovel;
+import ec3.common.items.ItemWindSword;
+import ec3.common.items.ItemWindTablet;
+import ec3.common.items.TestItemEC;
+import ec3.common.templates.ItemArmorMod;
+import ec3.common.templates.ItemAxeMod;
+import ec3.common.templates.ItemHoeMod;
+import ec3.common.templates.ItemShovelMod;
+import ec3.common.templates.ItemSwordMod;
 import ec3.root.EssentialCraftCore;
 import ec3.utils.dummycore.init.ItemRegistry;
 import ec3.utils.dummycore.utils.MiscUtils;
@@ -31,16 +100,11 @@ public class ECItems {
         windElemental = EnumHelper.addToolMaterial("windElemental", 11, 15684, 15.0F, 6F, 10);
         shade = EnumHelper.addToolMaterial("shade", 32, 0, 1.0F, 17.0F, 12);
 
-        magicArmorMaterial = EnumHelper
-            .addArmorMaterial("MRUFortified", 33, new int[] { 3, 8, 6, 3 }, 25);
-        voidArmorMaterial = EnumHelper
-            .addArmorMaterial("VoidFortified", 52, new int[] { 3, 8, 6, 3 }, 1);
-        inquisArmorMaterial = EnumHelper
-            .addArmorMaterial("Inquisitorium", 64, new int[] { 10, 10, 10, 10 }, 0);
-        windArmorMaterial = EnumHelper
-            .addArmorMaterial("WindElemental", 42, new int[] { 4, 10, 7, 4 }, 10);
-        computerArmorMaterial = EnumHelper
-            .addArmorMaterial("Computeric", 256, new int[] { 10, 30, 20, 10 }, 127);
+        magicArmorMaterial = EnumHelper.addArmorMaterial("MRUFortified", 33, new int[] { 3, 8, 6, 3 }, 25);
+        voidArmorMaterial = EnumHelper.addArmorMaterial("VoidFortified", 52, new int[] { 3, 8, 6, 3 }, 1);
+        inquisArmorMaterial = EnumHelper.addArmorMaterial("Inquisitorium", 64, new int[] { 10, 10, 10, 10 }, 0);
+        windArmorMaterial = EnumHelper.addArmorMaterial("WindElemental", 42, new int[] { 4, 10, 7, 4 }, 10);
+        computerArmorMaterial = EnumHelper.addArmorMaterial("Computeric", 256, new int[] { 10, 30, 20, 10 }, 127);
 
         testingItem = new TestItemEC().setUnlocalizedName("essentialcraft:testItem")
             .setTextureName("minecraft:blaze_rod")
@@ -49,6 +113,7 @@ public class ECItems {
         mruMover1 = new ItemMRUMover().setUnlocalizedName("essentialcraft:mruMover1")
             .setTextureName("essentialcraft:tools/mru_mover_t1")
             .setMaxStackSize(1)
+            .setMaxDamage(781)
             .setFull3D();
         ItemRegistry.registerItem(mruMover1, "essentialcraft.mruMover1", EssentialCraftCore.class);
         drops = new ItemDrop().setUnlocalizedName("essentialcraft:drops_")
@@ -478,7 +543,7 @@ public class ECItems {
             ItemMRUMover.class,
             "mruMover_t2",
             "tools/mru_mover_t2",
-            256 * 6,
+            1561,
             true,
             1);
         playerList = registerItemSimple(playerList, ItemPlayerList.class, "playerList", "minecraft:paper", 0, false, 1);

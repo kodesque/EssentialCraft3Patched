@@ -638,9 +638,7 @@ public class ECResearch {
                             .setText(StatCollector.translateToLocal("ec3.page.magicianTable_4.txt")))
                     .appendPage(
                         new PageEntry("ec3.page.magicianTable_5")
-                            .setText(StatCollector.translateToLocal("ec3.page.magicianTable_5.txt"))
-                    )
-            )
+                            .setText(StatCollector.translateToLocal("ec3.page.magicianTable_5.txt"))))
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.magicianCrafts")
                     .setReferal(
@@ -919,7 +917,8 @@ public class ECResearch {
                 new DiscoveryEntry("ec3.disc.rayTower").setReferal(new ItemStack(ECBlocks.rayTower))
                     .setDisplayStack(new ItemStack(ECBlocks.rayTower, 0, 0))
                     .appendPage(next("rayTower").setText(StatCollector.translateToLocal("ec3.page.rayTower_0.txt")))
-                    .appendPage(next("rayTower").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.rayTower), 2))))
+                    .appendPage(
+                        next("rayTower").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.rayTower), 2))))
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.book_t2").setDisplayStack(book_t2)
                     .appendPage(next("book_t2").setText(StatCollector.translateToLocal("ec3.page.book_t2_0.txt")))
@@ -1075,7 +1074,7 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.magicalChest").setDisplayStack(new ItemStack(ECBlocks.chest))
                     .setReferal(new ItemStack(ECBlocks.chest, 1, 0), new ItemStack(ECBlocks.chest, 1, 1))
-                    .setNew()
+
                     .appendPage(
                         next("magicalChest").setText(StatCollector.translateToLocal("ec3.page.magicalChest_0.txt")))
                     .appendPage(
@@ -1085,14 +1084,14 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.replanter").setDisplayStack(new ItemStack(ECBlocks.device, 1, 0))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 0))
-                    .setNew()
+
                     .appendPage(next("replanter").setText(StatCollector.translateToLocal("ec3.page.replanter_0.txt")))
                     .appendPage(
                         next("replanter").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.device, 1, 0), 2))))
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.itemShuffler").setDisplayStack(new ItemStack(ECBlocks.device, 1, 1))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 1))
-                    .setNew()
+
                     .appendPage(
                         next("itemShuffler").setText(StatCollector.translateToLocal("ec3.page.itemShuffler_0.txt")))
                     .appendPage(
@@ -1101,7 +1100,7 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.crafter").setDisplayStack(new ItemStack(ECBlocks.device, 1, 2))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 2), new ItemStack(ECItems.craftingFrame, 1, 0))
-                    .setNew()
+
                     .appendPage(next("crafter").setText(StatCollector.translateToLocal("ec3.page.crafter_0.txt")))
                     .appendPage(next("crafter").setText(StatCollector.translateToLocal("ec3.page.crafter_1.txt")))
                     .appendPage(
@@ -1112,14 +1111,14 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.breeder").setDisplayStack(new ItemStack(ECBlocks.device, 1, 3))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 3))
-                    .setNew()
+
                     .appendPage(next("breeder").setText(StatCollector.translateToLocal("ec3.page.breeder_0.txt")))
                     .appendPage(
                         next("breeder").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.device, 1, 3), 2))))
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.shearingStation").setDisplayStack(new ItemStack(ECBlocks.device, 1, 5))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 5))
-                    .setNew()
+
                     .appendPage(
                         next("shearingStation")
                             .setText(StatCollector.translateToLocal("ec3.page.shearingStation_0.txt")))
@@ -1129,7 +1128,7 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.separator").setDisplayStack(new ItemStack(ECBlocks.device, 1, 6))
                     .setReferal(new ItemStack(ECBlocks.device, 1, 6), new ItemStack(ECBlocks.device, 1, 6))
-                    .setNew()
+
                     .appendPage(next("separator").setText(StatCollector.translateToLocal("ec3.page.separator_0.txt")))
                     .appendPage(next("separator").setText(StatCollector.translateToLocal("ec3.page.separator_1.txt")))
                     .appendPage(
@@ -1139,7 +1138,7 @@ public class ECResearch {
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.advBreaker").setDisplayStack(new ItemStack(ECBlocks.advBreaker, 1, 0))
                     .setReferal(new ItemStack(ECBlocks.advBreaker, 1, 0), new ItemStack(ECItems.filter, 1, 0))
-                    .setNew()
+
                     .appendPage(next("advBreaker").setText(StatCollector.translateToLocal("ec3.page.advBreaker_0.txt")))
                     .appendPage(
                         next("advBreaker")
@@ -1194,7 +1193,8 @@ public class ECResearch {
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_3.txt")))
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_4.txt")))
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_5.txt")))
-                .appendPage(next("crystals").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.crystalFormer), 2)))
+                .appendPage(
+                    next("crystals").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.crystalFormer), 2)))
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_7.txt")))
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_8.txt")))
                 .appendPage(next("crystals").setText(StatCollector.translateToLocal("ec3.page.crystals_9.txt")))
@@ -2272,8 +2272,7 @@ public class ECResearch {
 
                     .appendPage(next("redSuit").setText(StatCollector.translateToLocal("ec3.page.redSuit_?.txt"))))
             .apendDiscovery(
-                new DiscoveryEntry("ec3.disc.newMim").setNew()
-                    .setDisplayStack(new ItemStack(ECBlocks.newMim, 1, 0))
+                new DiscoveryEntry("ec3.disc.newMim").setDisplayStack(new ItemStack(ECBlocks.newMim, 1, 0))
                     .setReferal(
                         new ItemStack(ECBlocks.newMim, 1, 0),
                         new ItemStack(ECBlocks.mimEjector, 1, 0),
@@ -2290,14 +2289,15 @@ public class ECResearch {
                     .appendPage(next("newMim").setText(StatCollector.translateToLocal("ec3.page.newMim_6.txt")))
                     .appendPage(next("newMim").setText(StatCollector.translateToLocal("ec3.page.newMim_7.txt")))
                     .appendPage(next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimEjector), 2)))
-                    .appendPage(next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimInjector), 2)))
+                    .appendPage(
+                        next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimInjector), 2)))
                     .appendPage(next("newMim").setText(StatCollector.translateToLocal("ec3.page.newMim_8.txt")))
-                    .appendPage(next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimEjectorP), 2)))
+                    .appendPage(
+                        next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimEjectorP), 2)))
                     .appendPage(
                         next("newMim").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimInjectorP), 2))))
             .apendDiscovery(
-                new DiscoveryEntry("newMimInv").setNew()
-                    .setDisplayStack(new ItemStack(ECBlocks.mimInvStorage))
+                new DiscoveryEntry("newMimInv").setDisplayStack(new ItemStack(ECBlocks.mimInvStorage))
                     .setReferal(new ItemStack(ECBlocks.mimInvStorage), new ItemStack(ECItems.inventoryGem))
                     .appendPage(next("newMimInv").setText(StatCollector.translateToLocal("ec3.page.newMimInv_0.txt")))
                     .appendPage(next("newMimInv").setText(StatCollector.translateToLocal("ec3.page.newMimInv_1.txt")))
@@ -2307,16 +2307,14 @@ public class ECResearch {
                     .appendPage(
                         next("newMimInv").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.inventoryGem), 2))))
             .apendDiscovery(
-                new DiscoveryEntry("newMimCraft").setNew()
-                    .setDisplayStack(new ItemStack(ECBlocks.mimCrafter))
+                new DiscoveryEntry("newMimCraft").setDisplayStack(new ItemStack(ECBlocks.mimCrafter))
                     .setReferal(new ItemStack(ECBlocks.mimCrafter))
                     .appendPage(
                         next("newMimCraft").setText(StatCollector.translateToLocal("ec3.page.newMimCraft_0.txt")))
                     .appendPage(
                         next("newMimCraft").setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECBlocks.mimCrafter), 2))))
             .apendDiscovery(
-                new DiscoveryEntry("newMimScreen").setNew()
-                    .setDisplayStack(new ItemStack(ECBlocks.mimScreen))
+                new DiscoveryEntry("newMimScreen").setDisplayStack(new ItemStack(ECBlocks.mimScreen))
                     .setReferal(new ItemStack(ECBlocks.mimScreen))
                     .appendPage(
                         next("newMimScreen").setText(StatCollector.translateToLocal("ec3.page.newMimScreen_0.txt")))

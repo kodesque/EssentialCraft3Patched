@@ -60,7 +60,6 @@ public class ItemChaosFork extends ItemSword implements IItemRequiresMRU {
 
     @Override
     public int getMRU(ItemStack stack) {
-        // TODO Auto-generated method stub
         return MiscUtils.getStackTag(stack)
             .getInteger("mru");
     }

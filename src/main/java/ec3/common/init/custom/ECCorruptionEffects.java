@@ -1,6 +1,8 @@
 package ec3.common.init.custom;
 
-import static ec3.api.corruption.EnumCorruptionEffect.*;
+import static ec3.api.corruption.EnumCorruptionEffect.BODY;
+import static ec3.api.corruption.EnumCorruptionEffect.MATRIX;
+import static ec3.api.corruption.EnumCorruptionEffect.MIND;
 
 import ec3.api.corruption.EnumCorruptionEffect;
 import ec3.utils.NBTCorruptionEffects;

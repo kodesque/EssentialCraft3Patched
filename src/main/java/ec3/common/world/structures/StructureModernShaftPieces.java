@@ -1,6 +1,6 @@
 package ec3.common.world.structures;
 
-import static net.minecraftforge.common.ChestGenHooks.*;
+import static net.minecraftforge.common.ChestGenHooks.MINESHAFT_CORRIDOR;
 
 import java.util.Iterator;
 import java.util.LinkedList;

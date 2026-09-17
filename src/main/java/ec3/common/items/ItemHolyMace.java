@@ -3,6 +3,7 @@ package ec3.common.items;
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -82,8 +83,10 @@ public class ItemHolyMace extends ItemSword implements IItemRequiresMRU/* ItemSt
     public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
         for (int var4 = 0; var4 < 1; ++var4) {
             ItemStack min = new ItemStack(par1, 1, 0);
+            min.addEnchantment(Enchantment.smite, 6);
             ECUtils.initMRUTag(min, maxMRU);
             ItemStack max = new ItemStack(par1, 1, 0);
+            max.addEnchantment(Enchantment.smite, 6);
             ECUtils.initMRUTag(max, maxMRU);
             ECUtils.getStackTag(max)
                 .setInteger(

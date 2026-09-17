@@ -17,7 +17,7 @@ import ec3.api.ApiCore;
 import ec3.common.tile.consumers.TileMRUGeneric;
 import ec3.common.tile.consumers.TileMagicalAssembler;
 import ec3.utils.ECUtils;
-import ec3.utils.dummycore.utils.*;
+import ec3.utils.dummycore.utils.UnformedItemStack;
 import ec3.utils.dummycore.utils.data.DataStorage;
 import ec3.utils.dummycore.utils.data.DummyData;
 import ec3.utils.dummycore.utils.math.Coord3D;

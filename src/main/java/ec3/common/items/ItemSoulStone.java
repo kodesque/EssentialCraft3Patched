@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -68,49 +69,59 @@ public class ItemSoulStone extends Item {
                     int att = ECUtils.getData(player)
                         .getMatrixTypeID();
                     par3List.add(
-                        EnumChatFormatting.DARK_GRAY + "Tracking MRU Matrix of " + EnumChatFormatting.GOLD + username);
+                        EnumChatFormatting.DARK_GRAY + new ChatComponentTranslation("ec3.txt.soulStone.tracking")
+                            .getFormattedText() + " " + EnumChatFormatting.GOLD + username);
                     par3List.add(
-                        EnumChatFormatting.DARK_GRAY + "Detected "
+                        EnumChatFormatting.DARK_GRAY
+                            + new ChatComponentTranslation("ec3.txt.soulStone.detected").getFormattedText()
+                            + " "
                             + EnumChatFormatting.GREEN
                             + currentEnergy
                             + EnumChatFormatting.DARK_GRAY
-                            + " UBMRU Energy");
+                            + " UBMRU");
 
                     String at = "Neutral";
                     switch (att) {
                         case 0: {
-                            at = EnumChatFormatting.GREEN + "Neutral";
+                            at = EnumChatFormatting.GREEN
+                                + new ChatComponentTranslation("ec3.txt.soulStone.balance.pure").getFormattedText();
                             break;
                         }
                         case 1: {
-                            at = EnumChatFormatting.RED + "Chaos";
+                            at = EnumChatFormatting.RED
+                                + new ChatComponentTranslation("ec3.txt.soulStone.balance.chaotic").getFormattedText();
                             break;
                         }
                         case 2: {
-                            at = EnumChatFormatting.BLUE + "Frozen";
+                            at = EnumChatFormatting.BLUE
+                                + new ChatComponentTranslation("ec3.txt.soulStone.balance.frozen").getFormattedText();
                             break;
                         }
                         case 3: {
-                            at = EnumChatFormatting.LIGHT_PURPLE + "Magic";
+                            at = EnumChatFormatting.LIGHT_PURPLE
+                                + new ChatComponentTranslation("ec3.txt.soulStone.balance.magical").getFormattedText();
                             break;
                         }
                         case 4: {
-                            at = EnumChatFormatting.GRAY + "Shade";
+                            at = EnumChatFormatting.GRAY
+                                + new ChatComponentTranslation("ec3.txt.soulStone.balance.shade").getFormattedText();
                             break;
                         }
                         default: {
-                            at = EnumChatFormatting.GREEN + "Unknown";
+                            at = EnumChatFormatting.GREEN + "???";
                             break;
                         }
                     }
                     par3List.add(
-                        EnumChatFormatting.DARK_GRAY + "MRU Matrix twists with "
+                        EnumChatFormatting.DARK_GRAY
+                            + new ChatComponentTranslation("ec3.txt.soulStone.matrix").getFormattedText()
                             + at
-                            + EnumChatFormatting.DARK_GRAY
-                            + " energies.");
+                            + EnumChatFormatting.DARK_GRAY);
                 }
             } else {
-                par3List.add(EnumChatFormatting.DARK_GRAY + "The MRU Matrix of the owner is too pale to track...");
+                par3List.add(
+                    EnumChatFormatting.DARK_GRAY
+                        + new ChatComponentTranslation("ec3.txt.soulStone.tooPale").getFormattedText());
                 if (clientTimer == 0) {
                     NBTTagCompound sTag = new NBTTagCompound();
                     sTag.setString("syncplayer", username);
@@ -147,12 +158,16 @@ public class ItemSoulStone extends Item {
                         + EnumChatFormatting.DARK_RED
                         + currentEssence
                         + EnumChatFormatting.DARK_GRAY
-                        + " Life Essence.");
+                        + " LP");
             } catch (Exception e) {
-                par3List.add(EnumChatFormatting.DARK_GRAY + "The owner's life network is pure and untouched...");
+                par3List.add(
+                    EnumChatFormatting.DARK_GRAY
+                        + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
             }
         } else if (par1ItemStack.getTagCompound() != null) {
-            par3List.add(EnumChatFormatting.DARK_GRAY + "The owner's life network is pure and untouched...");
+            par3List.add(
+                EnumChatFormatting.DARK_GRAY
+                    + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
         }
     }
 

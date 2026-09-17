@@ -53,6 +53,8 @@ import ec3.common.tile.logistics.TileNewMIMImportNode;
 import ec3.common.tile.logistics.TileNewMIMImportNodePersistant;
 import ec3.common.tile.logistics.TileNewMIMInventoryStorage;
 import ec3.common.tile.logistics.TileNewMIMScreen;
+import ec3.common.tile.other.TileCorruption;
+import ec3.common.tile.other.TileElementalCrystal;
 import ec3.common.tile.producers.TileColdDistillator;
 import ec3.common.tile.producers.TileCreativeMRUSource;
 import ec3.common.tile.producers.TileDarknessObelisk;
@@ -79,8 +81,6 @@ import ec3.common.tile.storage.TileChamberStateChecker;
 import ec3.common.tile.storage.TileMagicalChest;
 import ec3.common.tile.transport.TileMagicalMirror;
 import ec3.common.tile.transport.TileRayTower;
-import ec3.common.tile.other.TileCorruption;
-import ec3.common.tile.other.TileElementalCrystal;
 
 public class ECTiles {
 

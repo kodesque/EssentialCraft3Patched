@@ -1,12 +1,9 @@
-package ec3.utils.dummycore.creativetabs;
+package ec3.common.creativetabs;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -45,8 +42,7 @@ public final class CreativePageBlocks extends CreativeTabs {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void displayAllReleventItems(List list)
-    {
+    public void displayAllReleventItems(List list) {
         list.clear();
 
         List<ItemStack> manual = new ArrayList<ItemStack>();
@@ -175,7 +171,8 @@ public final class CreativePageBlocks extends CreativeTabs {
         manual.add(new ItemStack(ECBlocks.torch));
 
         for (int i = 0; i < ECBlocks.fancyBlocks.size(); i++) {
-            ECBlocks.fancyBlocks.get(i).getSubBlocks(Item.getItemFromBlock(ECBlocks.fancyBlocks.get(i)), this, manual);
+            ECBlocks.fancyBlocks.get(i)
+                .getSubBlocks(Item.getItemFromBlock(ECBlocks.fancyBlocks.get(i)), this, manual);
 
         }
 
@@ -184,22 +181,17 @@ public final class CreativePageBlocks extends CreativeTabs {
         List<ItemStack> defaultList = new ArrayList<ItemStack>();
         super.displayAllReleventItems(defaultList);
 
-        for (ItemStack stack : defaultList)
-        {
+        for (ItemStack stack : defaultList) {
             boolean alreadyAdded = false;
 
-            for (ItemStack manualStack : manual)
-            {
-                if (stack.getItem() == manualStack.getItem()
-                    && stack.getItemDamage() == manualStack.getItemDamage())
-                {
+            for (ItemStack manualStack : manual) {
+                if (stack.getItem() == manualStack.getItem() && stack.getItemDamage() == manualStack.getItemDamage()) {
                     alreadyAdded = true;
                     break;
                 }
             }
 
-            if (!alreadyAdded)
-            {
+            if (!alreadyAdded) {
                 list.add(stack);
             }
         }

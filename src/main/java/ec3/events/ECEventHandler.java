@@ -11,6 +11,8 @@ import java.util.Random;
 import java.util.Set;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -97,6 +99,7 @@ import ec3.common.init.ECItems;
 import ec3.common.init.custom.ECResearch;
 import ec3.common.items.BaublesAccessory;
 import ec3.common.items.ItemGun;
+import ec3.common.items.ItemHolyMace;
 import ec3.common.items.ItemMagicalWings;
 import ec3.common.items.ItemShadeSword;
 import ec3.common.items.ItemWindAxe;
@@ -118,7 +121,7 @@ import ec3.utils.ECUtils;
 import ec3.utils.RadiationUtils;
 import ec3.utils.dummycore.events.OnClientButtonPress;
 import ec3.utils.dummycore.events.OnPacketRecieved;
-import ec3.utils.dummycore.utils.*;
+import ec3.utils.dummycore.utils.MiscUtils;
 import ec3.utils.dummycore.utils.data.DataStorage;
 import ec3.utils.dummycore.utils.data.DummyData;
 import ec3.utils.dummycore.utils.math.Coord3D;
@@ -1093,6 +1096,15 @@ public class ECEventHandler {
                     int realMax = item.getMaxMRU(stack);
                     MiscUtils.getStackTag(stack)
                         .setInteger("maxMRU", realMax);
+                }
+            }
+
+            if (stack.getItem() instanceof ItemHolyMace) {
+
+                int level = EnchantmentHelper.getEnchantmentLevel(Enchantment.smite.effectId, stack);
+
+                if (level <= 0) {
+                    stack.addEnchantment(Enchantment.smite, 6);
                 }
             }
         }

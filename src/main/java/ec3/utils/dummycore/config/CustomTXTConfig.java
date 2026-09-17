@@ -15,19 +15,19 @@ public class CustomTXTConfig {
     public static boolean init = false;
 
     public static void createCFG() {
-//        try {
-//            File cfgDir = new File(Core.mcDir, "config");
-//            if (!cfgDir.exists()) cfgDir.mkdirs();
-//
-//            File actualCfg = new File(cfgDir, "DummyCoreASMSettings.cfg");
-//            if (!actualCfg.exists()) createDefaultCFG(actualCfg);
-//
-//            readCfg(actualCfg);
-//            init = true;
-//        } catch (Exception e) {
-//            FMLCommonHandler.instance()
-//                .raiseException(e, "[DummyCore]Something went wrong while trying to create ASM configuration!", true);
-//        }
+        // try {
+        // File cfgDir = new File(Core.mcDir, "config");
+        // if (!cfgDir.exists()) cfgDir.mkdirs();
+        //
+        // File actualCfg = new File(cfgDir, "DummyCoreASMSettings.cfg");
+        // if (!actualCfg.exists()) createDefaultCFG(actualCfg);
+        //
+        // readCfg(actualCfg);
+        // init = true;
+        // } catch (Exception e) {
+        // FMLCommonHandler.instance()
+        // .raiseException(e, "[DummyCore]Something went wrong while trying to create ASM configuration!", true);
+        // }
     }
 
     public static void createDefaultCFG(File cfgFile) {

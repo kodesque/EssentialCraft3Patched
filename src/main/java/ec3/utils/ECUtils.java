@@ -66,7 +66,7 @@ import ec3.network.PacketNBT;
 import ec3.root.EssentialCraftCore;
 import ec3.utils.dummycore.network.handlers.DummyPacketHandler;
 import ec3.utils.dummycore.network.packets.DummyPacket;
-import ec3.utils.dummycore.utils.*;
+import ec3.utils.dummycore.utils.MiscUtils;
 import ec3.utils.dummycore.utils.data.DummyData;
 import ec3.utils.dummycore.utils.math.Coord3D;
 import ec3.utils.dummycore.utils.math.DummyDistance;

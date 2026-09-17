@@ -9,11 +9,9 @@ import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIFleeSun;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.ai.EntityAIRestrictSun;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
@@ -39,8 +37,6 @@ public class EntityWindMage extends EntityMob implements IRangedAttackMob {
     public EntityWindMage(World p_i1741_1_) {
         super(p_i1741_1_);
         this.tasks.addTask(1, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIRestrictSun(this));
-        this.tasks.addTask(3, new EntityAIFleeSun(this, 1.0D));
         this.tasks.addTask(5, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(6, new EntityAILookIdle(this));
@@ -173,7 +169,12 @@ public class EntityWindMage extends EntityMob implements IRangedAttackMob {
      * Attack the specified entity using a ranged attack.
      */
     public void attackEntityWithRangedAttack(EntityLivingBase p_82196_1_, float p_82196_2_) {
-        EntityMRUArrow entityarrow = new EntityMRUArrow(this.worldObj, this, p_82196_1_, 1.6F, (float)(14 - this.worldObj.difficultySetting.getDifficultyId() * 4));
+        EntityMRUArrow entityarrow = new EntityMRUArrow(
+            this.worldObj,
+            this,
+            p_82196_1_,
+            1.6F,
+            (float) (14 - this.worldObj.difficultySetting.getDifficultyId() * 4));
 
         entityarrow.setDamage((this.getType() + 1) * 3);
         this.worldObj.spawnEntityInWorld(entityarrow);

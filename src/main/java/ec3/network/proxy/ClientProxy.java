@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
@@ -91,15 +92,70 @@ import ec3.client.gui.storage.GuiMagicalChest;
 import ec3.client.gui.storage.GuiRadiatingChamber;
 import ec3.client.gui.transport.GuiRayTower;
 import ec3.client.models.ModelArmorEC;
-import ec3.client.render.*;
-import ec3.client.render.entities.*;
+import ec3.client.render.ArmorRenderer;
+import ec3.client.render.RenderBlocksEC;
+import ec3.client.render.entities.RenderDemon;
+import ec3.client.render.entities.RenderDivider;
+import ec3.client.render.entities.RenderHologram;
+import ec3.client.render.entities.RenderMRUCU;
+import ec3.client.render.entities.RenderMRURay;
+import ec3.client.render.entities.RenderOrbitalStrike;
+import ec3.client.render.entities.RenderPlayerClone;
+import ec3.client.render.entities.RenderPoisonFume;
+import ec3.client.render.entities.RenderSolarBeam;
+import ec3.client.render.entities.RenderWindMage;
 import ec3.client.render.handlers.ClientRenderHandler;
 import ec3.client.render.handlers.RenderHandlerEC;
 import ec3.client.render.items.GunItemRenderHelper;
 import ec3.client.render.items.RenderElementalCrystalAsItem;
 import ec3.client.render.items.RenderOrbitalRemote;
 import ec3.client.render.items.RenderSolarPrismAsItem;
-import ec3.client.render.tiles.*;
+import ec3.client.render.tiles.RenderChargingChamber;
+import ec3.client.render.tiles.RenderColdDistillator;
+import ec3.client.render.tiles.RenderCollectedSpawner;
+import ec3.client.render.tiles.RenderCorruptionCleaner;
+import ec3.client.render.tiles.RenderCrystalController;
+import ec3.client.render.tiles.RenderCrystalExtractor;
+import ec3.client.render.tiles.RenderCrystalFormer;
+import ec3.client.render.tiles.RenderDarknessObelisk;
+import ec3.client.render.tiles.RenderDemonicPentacle;
+import ec3.client.render.tiles.RenderElementalCrystal;
+import ec3.client.render.tiles.RenderEnderGenerator;
+import ec3.client.render.tiles.RenderFlowerBurner;
+import ec3.client.render.tiles.RenderHeatGenerator;
+import ec3.client.render.tiles.RenderMIM;
+import ec3.client.render.tiles.RenderMINEjector;
+import ec3.client.render.tiles.RenderMINInjector;
+import ec3.client.render.tiles.RenderMRUCoil;
+import ec3.client.render.tiles.RenderMRUCoilHardener;
+import ec3.client.render.tiles.RenderMRULink;
+import ec3.client.render.tiles.RenderMRUReactor;
+import ec3.client.render.tiles.RenderMagicalAssembler;
+import ec3.client.render.tiles.RenderMagicalBuilder;
+import ec3.client.render.tiles.RenderMagicalChest;
+import ec3.client.render.tiles.RenderMagicalDisplay;
+import ec3.client.render.tiles.RenderMagicalEnchanter;
+import ec3.client.render.tiles.RenderMagicalJukebox;
+import ec3.client.render.tiles.RenderMagicalMirror;
+import ec3.client.render.tiles.RenderMagicalQuarry;
+import ec3.client.render.tiles.RenderMagicalRepairer;
+import ec3.client.render.tiles.RenderMagicianTable;
+import ec3.client.render.tiles.RenderMagmaticSmelter;
+import ec3.client.render.tiles.RenderMatrixAbsorber;
+import ec3.client.render.tiles.RenderMithrilineCrystal;
+import ec3.client.render.tiles.RenderMithrilineFurnace;
+import ec3.client.render.tiles.RenderMonsterHarvester;
+import ec3.client.render.tiles.RenderMonsterHolder;
+import ec3.client.render.tiles.RenderNewMIM;
+import ec3.client.render.tiles.RenderPlayerPentacle;
+import ec3.client.render.tiles.RenderPotionSpreader;
+import ec3.client.render.tiles.RenderRadiatingChamber;
+import ec3.client.render.tiles.RenderRayTower;
+import ec3.client.render.tiles.RenderSolarPrism;
+import ec3.client.render.tiles.RenderSunRayAbsorber;
+import ec3.client.render.tiles.RenderUltraFlowerBurner;
+import ec3.client.render.tiles.RenderUltraHeatGenerator;
+import ec3.client.render.tiles.RenderWindRune;
 import ec3.client.render.world.RenderCloudsHoanna;
 import ec3.client.render.world.RenderSkyHoanna;
 import ec3.common.entities.EntityArmorDestroyer;
@@ -211,6 +267,7 @@ import ec3.common.tile.logistics.TileNewMIMExportNode;
 import ec3.common.tile.logistics.TileNewMIMImportNode;
 import ec3.common.tile.logistics.TileNewMIMInventoryStorage;
 import ec3.common.tile.logistics.TileNewMIMScreen;
+import ec3.common.tile.other.TileElementalCrystal;
 import ec3.common.tile.producers.TileColdDistillator;
 import ec3.common.tile.producers.TileDarknessObelisk;
 import ec3.common.tile.producers.TileEnderGenerator;
@@ -232,7 +289,6 @@ import ec3.common.tile.storage.TileChamberStateChecker;
 import ec3.common.tile.storage.TileMagicalChest;
 import ec3.common.tile.transport.TileMagicalMirror;
 import ec3.common.tile.transport.TileRayTower;
-import ec3.common.tile.other.TileElementalCrystal;
 import ec3.utils.dummycore.client.GuiCommon;
 import ec3.utils.dummycore.network.handlers.DummyPacketHandler;
 import ec3.utils.dummycore.network.packets.DummyPacket;
@@ -533,9 +589,15 @@ public class ClientProxy extends CommonProxy {
                 MinecraftForgeClient.registerItemRenderer(ECItems.magicArmorItems[i], new ArmorRenderer());
         }
 
-        kbArmorBoost = new KeyBinding("ComputerArmorBoost", Keyboard.KEY_Z, "key.categories.gameplay");
+        kbArmorBoost = new KeyBinding(
+            new ChatComponentTranslation("essentialcraft.keybinds.computerarmor.boost").getFormattedText(),
+            Keyboard.KEY_Z,
+            "key.categories.gameplay");
         ClientRegistry.registerKeyBinding(kbArmorBoost);
-        kbArmorVision = new KeyBinding("ComputerArmorNightVision", Keyboard.KEY_X, "key.categories.gameplay");
+        kbArmorVision = new KeyBinding(
+            new ChatComponentTranslation("essentialcraft.keybinds.computerarmor.nightvision").getFormattedText(),
+            Keyboard.KEY_X,
+            "key.categories.gameplay");
         ClientRegistry.registerKeyBinding(kbArmorVision);
     }
 

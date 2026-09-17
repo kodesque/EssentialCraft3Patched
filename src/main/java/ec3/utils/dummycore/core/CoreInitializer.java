@@ -21,7 +21,7 @@ import ec3.utils.dummycore.network.handlers.DummyTilePacketHandler;
 import ec3.utils.dummycore.network.packets.DummyPacket;
 import ec3.utils.dummycore.network.packets.DummyPacketTile;
 import ec3.utils.dummycore.network.proxy.NetProxyServer;
-import ec3.utils.dummycore.utils.*;
+import ec3.utils.dummycore.utils.CommandTransfer;
 import ec3.utils.dummycore.utils.data.DummyDataUtils;
 
 /**
@@ -41,14 +41,6 @@ public class CoreInitializer {
 
     public static void preInit(FMLPreInitializationEvent e) {
 
-//        Core.registerModAbsolute(
-//            CoreInitializer.class,
-//            "DummyCore",
-//            e.getModConfigurationDirectory()
-//                .getAbsolutePath(),
-//            cfg,
-//            false);
-
         network = NetworkRegistry.INSTANCE.newSimpleChannel("DummyCore");
         network.registerMessage(DummyPacketHandler.class, DummyPacket.class, 0, Side.SERVER);
         network.registerMessage(DummyPacketHandler.class, DummyPacket.class, 0, Side.CLIENT);
@@ -62,9 +54,6 @@ public class CoreInitializer {
             .register(new DummyEventHandler());
 
         proxy.registerInfo();
-
-//        ModVersionChecker
-//            .addRequest(CoreInitializer.class, "https://www.dropbox.com/s/iwdfv0mc4qns00f/DummyCoreVersion.txt?dl=1");
     }
 
     public static void init(FMLInitializationEvent e) {
@@ -80,7 +69,4 @@ public class CoreInitializer {
         ((CommandHandler) mcserver.getCommandManager()).registerCommand(new CommandTransfer());
     }
 
-    public static void fmlLogMissingTextures() {
-        proxy.removeMissingTextureErrors();
-    }
 }

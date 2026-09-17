@@ -1,4 +1,26 @@
 # Essential Craft 3.5 Changelog
+## 4.7.2
+
+---
+
+### Changed:
+- Unhardcoded keybind localizations strings
+- Unhardcoded Soul Stone tooltip strings
+- MRU Radiation potion icon texture
+- Made all balance names use adjectives
+- Elemental Ore is now affected by fortune enchantment
+- MRUCU Moving Wands now break 2 times slower
+
+### Fixed:
+- Logs flooded by texture-not-found errors
+- Holy Mace not having Smite on it
+- Wind Mages being afraid of the sun
+- Ring of Experience spawning XP orbs in blocks
+- MRUCU Mover Tier 1 being unbreakable
+
+### Removed:
+- (Research Book) "New" marker
+
 ## 4.7.1
 
 ---
@@ -24,7 +46,7 @@
 - Wind mages spawn rate: 2 -> 15 (a little more often than Enderman)
 - Sorted the creative inventory
 - "Elemental/Weak Elemental" -> "Crystalline"/"Weak crystalline" (to avoid overlapping with Elemental Swords made from Embers)
-- (Weapons) "Knockback/Durability" -> "Recoil/Heat Capacity" -> "Heat capacity" (to avoid misunderstanding)
+- (Weapons) "Knockback/Durability" -> "Recoil/
 - Chaos Fork texture: 16x16 -> 32x32
 - Plating textures (now 32x32 when connected)
 - Magical Shield/Spiked Buckler textures (removed mixels)

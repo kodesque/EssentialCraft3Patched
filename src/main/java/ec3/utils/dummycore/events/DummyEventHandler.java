@@ -9,7 +9,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -18,7 +17,9 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 import cpw.mods.fml.relauncher.Side;
 import ec3.utils.dummycore.config.DummyConfig;
-import ec3.utils.dummycore.utils.*;
+import ec3.utils.dummycore.utils.ITEHasGameData;
+import ec3.utils.dummycore.utils.MiscUtils;
+import ec3.utils.dummycore.utils.SyncUtils;
 import ec3.utils.dummycore.utils.data.DataStorage;
 import ec3.utils.dummycore.utils.data.DummyData;
 import ec3.utils.dummycore.utils.system.ScheduledServerAction;

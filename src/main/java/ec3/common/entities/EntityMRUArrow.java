@@ -1,9 +1,7 @@
 package ec3.common.entities;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import ec3.root.EssentialCraftCore;
@@ -15,7 +13,8 @@ public class EntityMRUArrow extends EntityArrow {
         super(p_i1753_1_);
     }
 
-    public EntityMRUArrow(World world, EntityLivingBase shootingEntity, EntityLivingBase target, float position, float speed) {
+    public EntityMRUArrow(World world, EntityLivingBase shootingEntity, EntityLivingBase target, float position,
+        float speed) {
         super(world, shootingEntity, target, position, speed);
         this.canBePickedUp = 0;
     }
@@ -23,9 +22,9 @@ public class EntityMRUArrow extends EntityArrow {
     public void onUpdate() {
         super.onUpdate();
         if (this.ticksExisted > 60) this.setDead();
-//        this.motionX *= 0.8F;
+        // this.motionX *= 0.8F;
         // this.motionY *= 0.8F;
-//        this.motionZ *= 0.8F;
+        // this.motionZ *= 0.8F;
         for (int i = 0; i < 2; ++i) {
             EssentialCraftCore.proxy.spawnParticle(
                 "cSpellFX",

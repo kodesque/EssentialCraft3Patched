@@ -1013,8 +1013,10 @@ public class ECRecipes {
             5000,
             new Object[] { "plateMagic", "focusAir", "focusAir", "plateMagic", Items.feather, Items.feather,
                 "redSoulMatter", Items.feather, Items.feather, });
+
+        ItemStack holyMace = new ItemStack(ECItems.holyMace, 1, 0);
         addRecipe(
-            new ItemStack(ECItems.holyMace, 1, 0),
+            holyMace,
             1000,
             new Object[] { "redSoulMatter", "focusAir", new ItemStack(ECItems.genericItem, 1, 4), "ingotMagic",
                 ECItems.elemental_sword, "focusAir", "focusEarth", "ingotMagic", "redSoulMatter", });

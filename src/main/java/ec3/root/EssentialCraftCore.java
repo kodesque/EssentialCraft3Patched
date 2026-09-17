@@ -1,25 +1,34 @@
 package ec3.root;
 
+import java.io.File;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import cpw.mods.fml.common.Loader;
-import ec3.utils.dummycore.creativetabs.CreativePageBlocks;
-import ec3.utils.dummycore.creativetabs.CreativePageItems;
 import net.minecraft.command.CommandHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.server.MinecraftServer;
+import net.minecraftforge.common.config.Configuration;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.LoggerConfig;
+
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.event.FMLServerStoppedEvent;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import ec3.api.config.Config;
+import ec3.common.creativetabs.CreativePageBlocks;
+import ec3.common.creativetabs.CreativePageItems;
 import ec3.common.init.ECAchievements;
 import ec3.common.init.ECBiomes;
 import ec3.common.init.ECBlocks;
@@ -60,9 +69,9 @@ public class EssentialCraftCore {
     public static CommonProxy proxy;
     public static Config cfg = new Config();
     // TODO Do not forget to change the version number every git commit.
-    public static final String version = "4.7.1";
+    public static final String version = "4.7.2";
     public static final String modid = "essentialcraft";
-    public static final String name = "EssentialCraft3.5 Patched";
+    public static final String name = "EssentialCraft3 Patched";
     public static ModMetadata metadata;
     public static SimpleNetworkWrapper network;
 
@@ -94,21 +103,20 @@ public class EssentialCraftCore {
     public void preInit(FMLPreInitializationEvent event) {
         CoreInitializer.preInit(event);
 
-        Logger.getLogger("TEXTURE ERRORS").setLevel(Level.OFF);
+        File configFile = new File(event.getModConfigurationDirectory(), "Essential Craft 3.cfg");
+
+        Config.config = new Configuration(configFile);
+        cfg.load(Config.config);
+
+        LoggerContext context = (LoggerContext) LogManager.getContext(false);
+        LoggerConfig config = context.getConfiguration()
+            .getLoggerConfig("TEXTURE ERRORS");
+        config.setLevel(Level.OFF);
+        context.updateLoggers();
 
         metadata = event.getModMetadata();
 
         core = this;
-//        try {
-//            Core.registerModAbsolute(
-//                getClass(),
-//                "Essential Craft 3",
-//                event.getModConfigurationDirectory()
-//                    .getAbsolutePath(),
-//                cfg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 
         Check.checkerCommit();
         WailaInitializer.sendIMC();
@@ -159,15 +167,6 @@ public class EssentialCraftCore {
         CoreInitializer.init(event);
     }
 
-    public static boolean clazzExists(String clazzName) {
-        try {
-            Class<?> clazz = Class.forName(clazzName);
-            return clazz != null;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
@@ -186,8 +185,8 @@ public class EssentialCraftCore {
         metadata.credits = "Author: Modbder; Patched by: Kodesque;";
         metadata.authorList = Arrays.asList(new String[] { "Modbder", "Kodesque" });
         metadata.description = "EssentialCraft 3 is a huge technomagical mod which adds a new energy system, MRU (Magical Radiation Unit), and various ways to harness it.";
-        metadata.url = "https://github.com/kodesque/EssentialCraft3.5Patched";
-        metadata.updateUrl = "https://github.com/kodesque/EssentialCraft3.5Patched";
+        metadata.url = "https://github.com/Modbder/EssentialCraft3";
+        metadata.updateUrl = "https://github.com/Modbder/EssentialCraft3";
         metadata.logoFile = "assets/essentialcraft/textures/special/logo.png";
     }
 }

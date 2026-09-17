@@ -36,7 +36,6 @@ import ec3.api.mru.IMRUStorage;
 import ec3.common.init.ECItems;
 import ec3.utils.RadiationUtils;
 import ec3.utils.dummycore.utils.MiscUtils;
-import ec3.utils.dummycore.utils.math.MathUtils;
 
 public class BaublesAccessory extends Item
     implements IBauble, IUBMRUGainModifier, IMRUStorage, IWindResistance, IWindModifier {
@@ -239,9 +238,9 @@ public class BaublesAccessory extends Item
             original -= divide10;
             EntityXPOrb orb = new EntityXPOrb(
                 p.worldObj,
-                p.posX + MathUtils.randomFloat(rng),
-                p.posY + MathUtils.randomFloat(rng),
-                p.posZ + MathUtils.randomFloat(rng),
+                p.posX + p.worldObj.rand.nextFloat(),
+                p.posY + p.worldObj.rand.nextFloat(),
+                p.posZ + p.worldObj.rand.nextFloat(),
                 MathHelper.floor_float(divide10 / 4));
             orb.field_70532_c = 100;
             if (!p.worldObj.isRemote) p.worldObj.spawnEntityInWorld(orb);

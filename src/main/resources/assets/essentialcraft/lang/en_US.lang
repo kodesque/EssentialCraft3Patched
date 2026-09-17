@@ -3,7 +3,7 @@
 ########################
 
 item.essentialcraft:testItem.name=[DEV ONLY]
-item.essentialcraft.fruit_Item.name=Fruit
+item.essentialcraft:fruit_Item.name=Fruit
 item.essentialcraft:record_a.name=Record
 item.essentialcraft:record.name=Record
 item.essentialcraft:record_secret.name=It's A Mystery!
@@ -49,7 +49,7 @@ item.essentialcraft:magicalPorkchop.name=Magical Porkchop
 item.essentialcraft:charm.name=Elemental Charm
 item.essentialcraft:magicalWings.name=Magical Wings
 item.essentialcraft:chaosFork.name=Chaos Fork
-item.essentialcraft:frozenMace.name=Frost Mace
+item.essentialcraft:frozenMace.name=Frozen Mace
 item.essentialcraft:holyMace.name=Holy Mace
 item.essentialcraft:magmaticStaff.name=Magmatic Staff
 item.essentialcraft:magicalLantern.name=Magical Lantern
@@ -69,9 +69,9 @@ item.essentialcraft:soul.EntityEnderman.name=Captured Soul - Enderman
 item.essentialcraft:soul.EntityWindMage.name=Captured Soul - Wind Mage
 
 item.essentialcraft:mruMatrixProjection_empty.name=MRUMP - Empty
-item.essentialcraft:mruMatrixProjection_chaos.name=MRUMP - Chaos
-item.essentialcraft:mruMatrixProjection_frozen.name=MRUMP - Frost
-item.essentialcraft:mruMatrixProjection_magic.name=MRUMP - Magic
+item.essentialcraft:mruMatrixProjection_chaos.name=MRUMP - Chaotic
+item.essentialcraft:mruMatrixProjection_frozen.name=MRUMP - Frozen
+item.essentialcraft:mruMatrixProjection_magic.name=MRUMP - Magical
 item.essentialcraft:mruMatrixProjection_shade.name=MRUMP - SHADE
 
 item.essentialcraft:storageSoulShard.name=Soul Shard
@@ -128,7 +128,7 @@ item.essentialcraft:genItemmruCatcher.name=MRU Collecting Device
 item.essentialcraft:genItemmruConversionMatrix.name=MRU Conversion Matrix
 item.essentialcraft:genItemobsidianPlate.name=Obsidian Plate
 item.essentialcraft:genItemsunImbuedGlass.name=Sun Imbued Glass
-item.essentialcraft:genItemworldInteractor.name=World Interacting Device
+item.essentialcraft:genItemworldInteractor.name=World Interaction Device
 item.essentialcraft:genItemmagicPlate.name=Magical Plate
 item.essentialcraft:genItemvoidPlating.name=Void Plate
 item.essentialcraft:genItemvoidCore.name=Void Core
@@ -149,7 +149,7 @@ item.essentialcraft:genItemmagicPurifyedGoldAlloy.name=Magical Golden Ingot
 
 item.essentialcraft:genItemcombinedMagicalAlloys.name=Combined Magical Alloys
 item.essentialcraft:genItemmagicPurifyedEnderScaleAlloy.name=Ender Scale Alloy
-item.essentialcraft:genItemenderScalePlating.name=Enderscale Plating
+item.essentialcraft:genItemenderScalePlating.name=Enders Scale Plating
 item.essentialcraft:genItemmagicPurifyedGlassAlloy.name=Glass Alloy
 item.essentialcraft:genItemmagicPurifyedRedstoneAlloy.name=Redstone Alloy
 
@@ -323,8 +323,8 @@ tile.essentialcraft.magicPlatingBlock.name=Magical Plating Block
 tile.essentialcraft.rayTower.name=Ray Tower
 tile.essentialcraft.ecAcceptor.name=Enrichment Chamber MRU Acceptor
 tile.essentialcraft.ecBalancer.name=Enrichment Chamber Stabilizer
-tile.essentialcraft.corruption.frozen.name=Frost Corruption
-tile.essentialcraft.corruption.chaos.name=Chaos Corruption
+tile.essentialcraft.corruption.frozen.name=Frozen Corruption
+tile.essentialcraft.corruption.chaos.name=Chaotic Corruption
 tile.essentialcraft.corruption.shade.name=The SHADE
 tile.essentialcraft.corruption.magic.name=Magic Corruption
 tile.essentialcraft.fortifiedGlass.name=Magical Fortified Glass
@@ -358,7 +358,7 @@ tile.essentialcraft.voidGlass.name=Void Glass
 tile.essentialcraft.voidStone.name=Void Stone
 
 tile.essentialcraft:concrete.name=Concrete
-tile.essentialcraft.cacti.name=Cacti
+tile.essentialcraft.cacti.name=Dead Cactus
 tile.essentialcraft:dreadDirt.name=Dread Dirt
 tile.essentialcraft:root.name=Root
 tile.essentialcraft.magicalTeleporter.name=Magical Teleporter
@@ -397,7 +397,7 @@ tile.essentialcraft.fancyBlock.palePlating.name=Fancy Pale Plating Tile
 tile.essentialcraft.fancyBlock.voidStone.name=Fancy Void Stone Tile
 tile.essentialcraft.fancyBlock.blockCosmeticOpaque.name=Fancy Amber Tile
 tile.essentialcraft.fancyBlock.blockCosmeticSolid.name=Fancy Obsidian Tile
-tile.essentialcraft.magicalDisplay.name=[NYI]Magical Display
+tile.essentialcraft.magicalDisplay.name=Magical Display
 tile.essentialcraft.portal.name=Portal To Hoanna
 
 tile.essentialcraft.chest.name=Magical Chest
@@ -578,7 +578,7 @@ ec3.page.drops_3.txt=Earth Drops can be used as Earth Shards in Thaumcraft. To c
 ec3.page.drops_4.txt=Air Drops can be used as Air Shards in Thaumcraft. To craft them use Gunpowder.
 ec3.page.drops_5.txt=You can craft elemental drops. They are used in lots of crafts. You can also craft different tools, but that will come later.
 ec3.page.miscCrafts_0.txt=All items and devices you want to craft are really complicated, and can't be crafted from simplest resources. This means, that you have to use some advanced items to make the devices. And here they are!
-ec3.page.mru_0.txt=Now we are getting close to the bases. What is MRU? Is this some kind of energy? In fact, here lies the answer to this question. It may be kinda complicated, so I warn you!
+ec3.page.mru_0.txt=Now we are getting close to the basics. What is MRU? Is this some kind of energy? In fact, here lies the answer to this question. It may be kinda complicated, so I warn you!
 ec3.page.mru_1.txt=First of all, as we all know everything consists of so called 'molecules'. And those molecules are created from a bunch of even smaller particles - atoms. The atoms are not the smallest objects - they are made from some electrons, neutrons and protons.
 ec3.page.mru_2.txt=The atom represents a tiny solar system - it has a core, created from neutrons and protons, and electrons rotate around it in some form of layers. And this is not even its 'final form'! It can be divided into even smaller objects, but we do not need to do so right now.
 ec3.page.mru_3.txt=Here is a hand-drawn imaginary model of an atom of a matter called 'Lithium'.
@@ -777,16 +777,16 @@ ec3.page.weaponMaker_0.txt=You already know that MRU is a dangerous thing. But i
 ec3.page.weaponMaker_1.txt=The workstation for creating weapons is the Weapon Bench. Opening it brings up a peculiar GUI. There are four types of weapons in total: pistol, rifle, sniper rifle and gatling. To change the weapon type the bench is configured for, simply place it into the crafting grid.
 ec3.page.weaponMaker_2.txt=Several types of parts are used to create weapons. The Pistol and Rifle require only the following parts: Base, Handle, Mechanism. The Sniper Rifle additionally requires a Scope (Glass Alloy + any of the available materials), while the Gatling requires a Lens (Sun Imbued Glass + MRUMP). To use the scope, press SHIFT while holding the weapon in your hands. The Lens has no combat power - it only affects the color of the ray.
 ec3.page.weaponMaker_3.txt=Each slot in the bench has a designation corresponding to the weapon part: B - Base, H - Handle, M - Mechanism, S - Scope. Slots with the same designations must use the same material. For example, all B slots must contain the same material. Materials in slots with different designations may differ. Each weapon has several parameters that can be viewed by hovering over the weapon and pressing SHIFT.
-ec3.page.weaponMaker_4.txt=The main parameters are: Heat Capacity - determines how much heat the weapon can accumulate before overheating. Shots - number of shots available before overheating. Zoom - a special characteristic relevant only to the sniper rifle. Damage, reload time, recoil, dispersion, and shooting speed are self-explanatory.
+ec3.page.weaponMaker_4.txt=The main parameters are: Durability - determines how much damage the weapon can sustain before it becomes prone to breaking. Shots - number of shots available before overheating and requiring cooling. Zoom - a special characteristic relevant only to the sniper rifle. Damage, reload time, recoil, dispersion, and shooting speed are self-explanatory.
 ec3.page.weaponMaker_5.txt=Each material has its own base characteristics, which are taken into account when calculating the weapon's effectiveness. It is important to note that each element and weapon type has its own final multipliers, which affect the resulting effectiveness.
-ec3.page.weaponMaker_6.txt=The following order lists Heat Capacity, Damage, Reload, Recoil, Dispersion, Speed, Shots: MRU -> 120, 8, 5, 6, 3, 3, 2 (3x for Scope). Pale -> 160, 11, 8, 2, 6, 1, 2 (5x for Scope). Mithriline -> 300, 14, 12, 12, 1, 6, 12 (7x for Scope). Void -> 1200, 18, 4, 2, 6, 2, 8 (12x for Scope). Demonic -> 3000, 26, 2, 0, 1, 1, 20 (16x for Scope)
+ec3.page.weaponMaker_6.txt=The following order lists Durability, Damage, Reload, Recoil, Dispersion, Speed, Shots: MRU -> 120, 8, 5, 6, 3, 3, 2 (3x for Scope). Pale -> 160, 11, 8, 2, 6, 1, 2 (5x for Scope). Mithriline -> 300, 14, 12, 12, 1, 6, 12 (7x for Scope). Void -> 1200, 18, 4, 2, 6, 2, 8 (12x for Scope). Demonic -> 3000, 26, 2, 0, 1, 1, 20 (16x for Scope)
 ec3.page.weaponMaker_7.txt=Each part contributes to the characteristics of the resulting weapon:
-ec3.page.weaponMaker_8.txt=Base -> Heat Capacity, Damage, Recoil and Dispersion receive 1/3 of the material value; Reload, Speed and Shots receive the full value. Handle -> Heat Capacity, Damage and Dispersion receive 1/3; 
-ec3.page.weaponMaker_9.txt=Recoil receives the full value; Reload, Speed and Shots receive 1/3. Mechanism -> Heat Capacity, Reload, Recoil, Speed and Shots receive 1/3; Damage and Dispersion receive the full value. 
-ec3.page.weaponMaker_10.txt=Lens (Lens) ->if a lens material exists for the given weapon type, all seven main characteristics receive 1/3 of the material value: Heat Capacity, Damage, Reload, Recoil, Dispersion, Speed and Shots. Scope (Scope) ->all seven main characteristics also receive 1/3 of the material value. Additionally, the Zoom value is increased by the Zoom value of the scope itself.
+ec3.page.weaponMaker_8.txt=Base -> Durability, Damage, Recoil and Dispersion receive 1/3 of the material value; Reload, Speed and Shots receive the full value. Handle -> Durability, Damage and Dispersion receive 1/3;
+ec3.page.weaponMaker_9.txt=Recoil receives the full value; Reload, Speed and Shots receive 1/3. Mechanism -> Durability, Reload, Recoil, Speed and Shots receive 1/3; Damage and Dispersion receive the full value.
+ec3.page.weaponMaker_10.txt=Lens (Lens) ->if a lens material exists for the given weapon type, all seven main characteristics receive 1/3 of the material value: Durability, Damage, Reload, Recoil, Dispersion, Speed and Shots. Scope (Scope) ->all seven main characteristics also receive 1/3 of the material value. Additionally, the Zoom value is increased by the Zoom value of the scope itself.
 ec3.page.weaponMaker_11.txt=And finally, the influence of weapon types on the characteristics: Pistol -> Reload / 2; Rifle -> Speed = 0; Dispersion x 1.3; Shots x 6; Sniper Rifle -> Speed x 9; Spread / 10; Damage x 2; Gatling -> Speed = 0; Dispersion x 4.5; Shots x 20
-ec3.page.weaponMaker_12.txt=Magical weapons do not have normal durability. Instead, they consume energy when firing. The final cost also depends on the weapon type and the final damage it deals: Pistol / Sniper Rifle: Damage x 10; Rifle: Damage x 3; Gatling: Damage x 2.
-ec3.page.weaponMaker_13.txt=During prolonged firing, any weapon accumulates heat. When the heat reaches its limit, the barrel overheats. Simply hold RMB to cool the barrel. If the weapon is already overheated, subsequent firing may cause it to break. However, the weapon is not destroyed - it can be restored in an anvil using the same material that was used to create its Base.
+ec3.page.weaponMaker_12.txt=Magical weapons have normal durability and consume energy when firing. The final energy cost also depends on the weapon type and the final damage it deals: Pistol / Sniper Rifle: Damage x 10; Rifle: Damage x 3; Gatling: Damage x 2.
+ec3.page.weaponMaker_13.txt=During prolonged firing, any weapon uses up its available shots until it overheats. When the shot limit is reached, the weapon stops firing and requires cooling. Simply hold RMB to cool the barrel. Durability is consumed as the weapon is used, and continued firing with a worn weapon may cause it to break. However, the weapon is not destroyed permanently - it can be restored in an anvil using the same material that was used to create its Base.
 ec3.page.weaponMaker_14.txt=Finally, it is worth mentioning that the MRU ray is extremely effective against players. It has a devastating effect not only on their health, but also on their Matrix, up to its complete destruction. This effectively means that the effects after a combat encounter will continue for a long time.
 
 ### MRU ENGINEERING
@@ -833,7 +833,7 @@ ec3book.discovery_ec3.disc.biomeWand.name=Biome Wand
 ec3book.discovery_ec3.disc.biomeWand.desc=Correcting the Creator!
 ec3book.discovery_ec3.disc.chaosFork.name=Chaos Fork
 ec3book.discovery_ec3.disc.chaosFork.desc=No chests of chaos this time
-ec3book.discovery_ec3.disc.frozenMace.name=Frost Mace
+ec3book.discovery_ec3.disc.frozenMace.name=Frozen Mace
 ec3book.discovery_ec3.disc.frozenMace.desc=33% permafrost chance
 ec3book.discovery_ec3.disc.magmaticStaff.name=Magmatic Staff
 ec3book.discovery_ec3.disc.magmaticStaff.desc=The sleepin' volcano
@@ -856,7 +856,7 @@ ec3book.discovery_ec3.disc.magicalRepairer.desc=Hello? Tech support?
 ec3book.discovery_ec3.disc.monsterDuplicator.name=Monster Duplicator
 ec3book.discovery_ec3.disc.monsterDuplicator.desc=From different dimensions they come...
 ec3book.discovery_ec3.disc.magmaticSmeltery.name=Magmatic Smeltery
-ec3book.discovery_ec3.disc.magmaticSmeltery.desc=Smelt the bases!
+ec3book.discovery_ec3.disc.magmaticSmeltery.desc=Smelt the basics!
 ec3book.discovery_ec3.disc.magicalQuarry.name=Magical Quarry
 ec3book.discovery_ec3.disc.magicalQuarry.desc=Move along, BuildCraft!
 ec3book.discovery_ec3.disc.hoanna.name=Visiting Hoanna
@@ -915,8 +915,8 @@ ec3.page.magicalPorkchop_0.txt=At some cost of MRU restores some hunger. Pretty 
 ec3.page.magicalWater_0.txt=This item, at a cost of some MRU will remove ALL status effects from you if you drink it. Can remove Thaumcraft warp effects as well. Unable to remove radiation, however.
 ec3.page.magicalShield_0.txt=Upon blocking with this item the player will be granted invincibility to all incoming damage at a huge cost of MRU. The upgraded version also damages all enemies of a player in a range of 5 blocks when the block wears off.
 ec3.page.biomeWand_0.txt=We all know, that in Minecraft biomes are permanent and unchangeable. No longer the case! This item can store any kind of biome in it upon right-clicking the ground. After that, you can right-click the ground anywhere else, and the biome at that position will be changed to the stored one! You can reset the biome the wand holds if right-clicking while sneaking.
-ec3.page.chaosFork_0.txt=This weapon only functions if your MRU Matrix is set to Chaos. Upon the first strike this weapon will deal 6 damage. Upon every next hit 2 unblockable damage will get added. Stacks infinitely.
-ec3.page.frozenMace_0.txt=This weapon only functions if your MRU Matrix is set to Frost. Upon the first strike nothing special will happen. Upon any next strikes the attacked entity will have his movement and attack speed slowed by 18%. Stacks infinitely.
+ec3.page.chaosFork_0.txt=This weapon only functions if your MRU Matrix is set to Chaotic. Upon the first strike this weapon will deal 6 damage. Upon every next hit 2 unblockable damage will get added. Stacks infinitely.
+ec3.page.frozenMace_0.txt=This weapon only functions if your MRU Matrix is set to Frozen. Upon the first strike nothing special will happen. Upon any next strikes the attacked entity will have his movement and attack speed slowed by 18%. Stacks infinitely.
 ec3.page.magmaticStaff_0.txt=This item, much alike the magmatic Smeltery upon right-clicking any ore will smelt it into the corresponding Magmatic Alloy.
 ec3.page.mhs_0.txt=This set of armor grants the wearer a great protection from any type of MRU damage, such as - passive radiation from working devices, active MRU radiation and MRU corruption blocks in the world. The armor is better than diamond and has a great enchantability.
 ec3.page.elementalCharms_0.txt=This items are infused with elements. It allows them to interact with the wearer at a cost of some MRU under special occasions. In order to function the charm must be located anywhere in the inventory.
@@ -1038,18 +1038,18 @@ ec3.page.magicalBuilder_5.txt=The wand can select a region with a maximum length
 
 ### ENDER STAR
 ec3book.category_ec3.ender.name=The legend of the Enderstar...
-ec3book.category_ec3.ender.desc=The forgotten knowledge comes into play!
+ec3book.category_ec3.ender.desc=Forgotten knowledge comes into play!
 
 ec3book.discovery_enderstar.name=The Enderstar Legend...
 ec3book.discovery_enderstar.desc=What keeps us alive...
-ec3book.discovery_mithriline.name=Mitriline
+ec3book.discovery_mithriline.name=Mithriline
 ec3book.discovery_mithriline.desc=The changes of your world...
-ec3book.discovery_mithrilineFurnace.name=Mitriline Furnace
-ec3book.discovery_mithrilineFurnace.desc=The bases of alchemy?
+ec3book.discovery_mithrilineFurnace.name=Mithriline Furnace
+ec3book.discovery_mithrilineFurnace.desc=The basics of alchemy?
 ec3book.discovery_windRune.name=Wind Rune
 ec3book.discovery_windRune.desc=Wind infusion!
 ec3book.discovery_playerPentacle.name=Soul Pentacle
-ec3book.discovery_playerPentacle.desc=Cleanse the soul!
+ec3book.discovery_playerPentacle.desc=Clean the soul!
 ec3book.discovery_demonicPentacle.name=Demonic Pentacle
 ec3book.discovery_demonicPentacle.desc=They seek souls and the king... casual.
 ec3book.discovery_hologram.name=Holographic Projection
@@ -1064,7 +1064,7 @@ ec3.page.enderstar_2.txt=This energy is called ESPE - Ender Star Pulse Energy, a
 ec3.page.mithriline_0.txt=The Enderstar Pulses do not change anything on their own... However, it seems, that some MRU rays were caught by the pulse when they were passing through your world. That changed something - however, not much. It seems, that most of the world stayed unaffected, but the Lapis.
 ec3.page.mithriline_1.txt=When mined, Lapis Ore will now drop a piece of Mithriline. The amount of Mithriline dropped is affected by fortune enchantment.
 ec3.page.mithriline_2.txt=Mithriline Plating can be used as a part of MRUCU Enrichment Chamber, giving it a lot of protection against MRU rays.
-ec3.page.mithriline_3.txt=Mithriline Crystals seem to be able to collect a tiny piece of ESPE each tick. However, they need to see the sky to operate properly! In any case, this will find its use later. Since Mithriline is inextricably linked to the End dimension, the crystals will function 4 times more effectively when located there. Crystals can be modified using various materials, but this does not increase the amount of energy; instead, it alters the circumstances in which they are to be used.
+ec3.page.mithriline_3.txt=Mithriline Crystals are used to collect ESPE. Note that they need to see the sky to operate properly! In any case, this will find its use later. Since Mithriline is somehow linked to the End dimension, the crystals will gather 4 times more energy when located there. They can also be 'altered' using various materials. And 'altered' means suitable for use in other new rituals, not collecting more ESPE.
 
 ec3.page.mithrilineFurnace_0.txt=This structure is able to harness the power of the Enderstar to transform some items into other. The most important thing that it can do - it can transform the Glowstone into Mithriline Dust! It can also transform 1 piece of mithriline dust into 1 mithriline ingot. Also, MRU Resonating Crystal can be transformed into Mithriline crystal.
 ec3.page.mithrilineFurnace_1.txt=The Mithriline Crystal can be transformed into Fading Crystal, which gets transformed into Fading Dust. It is also worth trying transforming other items, like redstone or ender pearls - thi may yield some interesting results! It is also worth noticing that the furnace can get ESPE from not only 4 corner crystals, but from crystals, placed on top of Mithriline Plating Blocks.
@@ -1146,8 +1146,8 @@ ec3.page.newMimScreen_2.txt=Crafting works the same way as requesting. You can a
 ##########################
 
 essentialcraft.gui.balance.pure=Pure
-essentialcraft.gui.balance.frozen=Frost
-essentialcraft.gui.balance.chaos=Chaos
+essentialcraft.gui.balance.frozen=Frozen
+essentialcraft.gui.balance.chaos=Chaotic
 
 essentialcraft.gui.bound.none=No Bound Gem!
 essentialcraft.gui.bound.noconnection=Gem Not Bound!
@@ -1185,6 +1185,8 @@ essentialcraft.gui.nei.mithrilinefurnace=Mithriline Furnace
 essentialcraft.gui.nei.windimbue=Wind Imbuement
 essentialcraft.gui.nei.worldgen=EssentialCraft Worldgen
 
+essentialcraft.keybinds.computerarmor.boost=Computer Armor Boost
+essentialcraft.keybinds.computerarmor.nightvision=Computer Armor Night Vision
 
 ##########################
 #      ACHIEVEMENTS
@@ -1371,18 +1373,18 @@ ec3.txt.desc.whitelist=Whitelist
 ### WEAPONS
 
 ec3.txt.viewInfoHotkey=Hold Shift to view gun stats
-ec3.gun.txt.damage=Damage per shot:
-ec3.gun.txt.durability=Heat capacity:
+ec3.gun.txt.damage=Damage:
+ec3.gun.txt.durability=Durability:
 ec3.gun.txt.reload=Cooldown (sec):
 ec3.gun.txt.knockback=Recoil:
-ec3.gun.txt.speed=Delay between shots:
+ec3.gun.txt.speed=Speed:
 ec3.gun.txt.spread=Dispersion (degrees):
 ec3.gun.txt.shots=Shots before cooldown:
 ec3.gun.txt.zoom=Scope zoom factor:
-ec3.gun.txt.balance_0=Lens balance: Neutral
-ec3.gun.txt.balance_1=Lens balance: Chaos
-ec3.gun.txt.balance_2=Lens balance: Frost
-ec3.gun.txt.balance_3=Lens balance: Magic
+ec3.gun.txt.balance_0=Lens balance: Pure
+ec3.gun.txt.balance_1=Lens balance: Chaotic
+ec3.gun.txt.balance_2=Lens balance: Frozen
+ec3.gun.txt.balance_3=Lens balance: Magical
 ec3.gun.txt.balance_4=Lens balance: SHADE
 
 ### BUILDING WAND
@@ -1395,6 +1397,19 @@ ec3.txt.fillMode.replaceAll=Filling Mode: Replace All
 ec3.txt.p1=Point 1
 ec3.txt.p2=Point 2
 ec3.txt.storedStack=Selected Block
+
+### SOUL STONE
+
+ec3.txt.soulStone.tracking=Tracking MRU Matrix of
+ec3.txt.soulStone.detected=Detected 
+ec3.txt.soulStone.matrix=MRU Matrix twists with energies of
+ec3.txt.soulStone.balance.pure=Purity
+ec3.txt.soulStone.balance.chaotic=Chaos
+ec3.txt.soulStone.balance.frozen=Frost
+ec3.txt.soulStone.balance.magical=Magic
+ec3.txt.soulStone.balance.shade=SHADE
+ec3.txt.soulStone.tooPale=User's MRU Matrix is too pale to track...
+ec3.txt.soulStone.unactive=The owner's life network is pure and untouched...
 
 ### ARMOR
 

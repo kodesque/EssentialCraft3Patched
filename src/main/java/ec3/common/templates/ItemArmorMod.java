@@ -3,7 +3,6 @@ package ec3.common.templates;
 import java.util.List;
 import java.util.UUID;
 
-import cpw.mods.fml.common.Loader;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.creativetab.CreativeTabs;
@@ -39,12 +38,10 @@ import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.nodes.IRevealer;
 
-@Optional.InterfaceList({
-    @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.IRepairable"),
+@Optional.InterfaceList({ @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.IRepairable"),
     @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.IVisDiscountGear"),
     @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.nodes.IRevealer"),
-    @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.IGoggles")
-})
+    @Optional.Interface(modid = "thaumcraft", iface = "thaumcraft.api.IGoggles") })
 public class ItemArmorMod extends ItemArmor
     implements IRepairable, IVisDiscountGear, IRevealer, IGoggles, ISpecialArmor, IItemRequiresMRU {
 

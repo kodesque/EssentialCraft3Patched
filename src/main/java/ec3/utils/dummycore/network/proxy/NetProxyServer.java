@@ -11,8 +11,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import ec3.utils.dummycore.creativetabs.CreativePageBlocks;
-import ec3.utils.dummycore.creativetabs.CreativePageItems;
+import ec3.common.creativetabs.CreativePageBlocks;
+import ec3.common.creativetabs.CreativePageItems;
 import ec3.utils.dummycore.utils.GuiContainerLibrary;
 import ec3.utils.dummycore.utils.system.Notifier;
 

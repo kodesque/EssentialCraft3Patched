@@ -109,10 +109,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromRight(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
@@ -175,10 +179,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromLeft(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
@@ -241,10 +249,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromBack(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
-            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
-            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
+            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
+            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
@@ -307,10 +319,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromFront(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
-            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
-            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
-            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 + 1, par4)))
+            && (par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3 - 1, par4)))
+            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
+            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3 + 1, par4) == this
@@ -373,10 +389,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromTop(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
-            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
-            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
+            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
+            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
@@ -439,10 +459,14 @@ public class BlockConnectedTextures extends Block {
     }
 
     public IIcon getIconFromBottom(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
-        if ((par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))
-            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
-            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
-            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
+        if ((par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
+            || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 + 1)))
+            && (par1IBlockAccess.getBlock(par2, par3, par4 - 1) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2, par3, par4 - 1)))
+            && (par1IBlockAccess.getBlock(par2 - 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 - 1, par3, par4)))
+            && (par1IBlockAccess.getBlock(par2 + 1, par3, par4) == this
+                || doesBlockPass(par1IBlockAccess.getBlock(par2 + 1, par3, par4)))) {
             return this.blockIcons[13];
         }
         if (par1IBlockAccess.getBlock(par2, par3, par4 + 1) == this
@@ -565,12 +589,11 @@ public class BlockConnectedTextures extends Block {
     }
 
     public boolean doesBlockPass(Block block) {
-        return block instanceof BlockecStateChecker ||
-            block instanceof BlockecAcceptor ||
-            block instanceof BlockecController ||
-            block instanceof BlockecBalancer ||
-            block instanceof BlockecEjector ||
-            block instanceof BlockecHoldingChamber ||
-            block instanceof BlockecRedstoneController;
+        return block instanceof BlockecStateChecker || block instanceof BlockecAcceptor
+            || block instanceof BlockecController
+            || block instanceof BlockecBalancer
+            || block instanceof BlockecEjector
+            || block instanceof BlockecHoldingChamber
+            || block instanceof BlockecRedstoneController;
     };
 }

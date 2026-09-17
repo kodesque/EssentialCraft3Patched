@@ -76,7 +76,7 @@ public class ItemMRUMover extends Item {
                         presence.posZ - moveZ,
                         0,
                         0);
-                    if (count % 20 == 0) stack.damageItem(1, player);
+                    if (count % 40 == 0) stack.damageItem(1, player);
                 }
 
                 break;
