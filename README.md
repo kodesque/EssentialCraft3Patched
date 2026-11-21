@@ -42,7 +42,7 @@ Also features a new dimension and a unique boss!
 ### Assets changes
 - Models of all magical devices have been optimized, corrected (blurry textures) and partially improved.
 - Changed MRU Radiation potion icon texture.
-- Changed Chaos Fork texture from 16×16 → 32×32.
+- Changed Chaos Fork texture from 16×16 -> 32×32.
 - Changed plating textures to 32×32 when connected.
 - Changed Magical Shield and Spiked Buckler textures (removed mixels)
 - Changed Magical Furnaces textures (removed mixels)
@@ -81,21 +81,21 @@ Also features a new dimension and a unique boss!
 ### Name changes
 - Renamed Chaos / Magic -> Chaotic / Magical
 - Renamed Elemental / Weak Elemental -> Crystalline / Weak Crystalline.
-- Renamed weapon stats Knockback → Recoil
+- Renamed weapon stats Knockback -> Recoil
 ### Other changes
 - Sorted the Creative Tabs
 - Added removeClosestMRUCU command
 - Renamed chat commands:
-  - setMRU → setMRUClosestMRUCU
-  - setBalance → setBalanceClosestMRUCU
+  - setMRU -> setMRUClosestMRUCU
+  - setBalance -> setBalanceClosestMRUCU
 - Changed chat command syntax:
-  - /command → /essentialcraft (command) or /ec (command)
+  - /command -> /essentialcraft (command) or /ec (command)
 ### Added
 - Book of Knowledge: added more specific information about various Magician's Table upgrades.
 - Book of Knowledge: clarified that Mithriline Crystals need to see the sky to operate.
 - Book of Knowledge: expanded Weapon Bench entry.
 ### Removed features
-- Removed flickering creative-tab icons; replaced them with simple items.
+- Removed flickering creative tab icons; replaced them with simple items.
 - Removed custom font from the Book of Knowledge; now uses the default Minecraft font.
 - Removed alternative Main Menu GUIs.
 - Removed automatic version checker; not needed with Curseforge/Modrinth

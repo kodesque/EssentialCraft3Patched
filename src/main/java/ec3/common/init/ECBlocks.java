@@ -75,8 +75,8 @@ import ec3.common.blocks.BlockNewMIMExporterPersistent;
 import ec3.common.blocks.BlockNewMIMImporter;
 import ec3.common.blocks.BlockNewMIMImporterPersistent;
 import ec3.common.blocks.BlockNewMIMInventoryStorage;
-import ec3.common.blocks.BlockPlayerPentacle;
-import ec3.common.blocks.BlockPortal;
+import ec3.common.blocks.BlockSoulPentacle;
+import ec3.common.blocks.BlockHoannaPortal;
 import ec3.common.blocks.BlockPotionSpreader;
 import ec3.common.blocks.BlockRadiatingChamber;
 import ec3.common.blocks.BlockRayTower;
@@ -659,7 +659,7 @@ public class ECBlocks {
             1,
             1,
             0);
-        portal = registerBlockSimple(BlockPortal.class, Material.rock, portal, "portal", "portal", -1, -1, 1);
+        portal = registerBlockSimple(BlockHoannaPortal.class, Material.rock, portal, "portal", "portal", -1, -1, 1);
         oreDrops = registerBlockSimple(
             BlockDropsOre.class,
             Material.rock,
@@ -705,7 +705,7 @@ public class ECBlocks {
         BlocksRegistry
             .registerBlock(demonicPlating, "demonicPlating", EssentialCraftCore.class, ItemBlockGeneric.class);
         playerPentacle = registerBlockSimple(
-            BlockPlayerPentacle.class,
+            BlockSoulPentacle.class,
             Material.rock,
             playerPentacle,
             "playerPentacle",
@@ -713,7 +713,7 @@ public class ECBlocks {
             0,
             0,
             0);
-        windRune = registerBlockSimple(BlockWindRune.class, Material.rock, windRune, "windRune", "windRune", 3, 10, 0);
+        windRune = registerBlockSimple(BlockWindRune.class, Material.rock, windRune, "windRune", "windRune", 0, 0, 0);
         rightClicker = registerBlockSimple(
             BlockRightClicker.class,
             Material.rock,

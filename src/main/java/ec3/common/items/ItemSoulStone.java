@@ -74,13 +74,13 @@ public class ItemSoulStone extends Item {
                     par3List.add(
                         EnumChatFormatting.DARK_GRAY
                             + new ChatComponentTranslation("ec3.txt.soulStone.detected").getFormattedText()
-                            + " "
+//                            + " "
                             + EnumChatFormatting.GREEN
                             + currentEnergy
                             + EnumChatFormatting.DARK_GRAY
                             + " UBMRU");
 
-                    String at = "Neutral";
+                    String at;
                     switch (att) {
                         case 0: {
                             at = EnumChatFormatting.GREEN
@@ -115,8 +115,20 @@ public class ItemSoulStone extends Item {
                     par3List.add(
                         EnumChatFormatting.DARK_GRAY
                             + new ChatComponentTranslation("ec3.txt.soulStone.matrix").getFormattedText()
+                            + " "
                             + at
                             + EnumChatFormatting.DARK_GRAY);
+
+                    if (ECUtils.getData(player).isWindbound()) {
+                        par3List.add(
+                            EnumChatFormatting.GREEN
+                                +
+                                ""
+                                +
+                                EnumChatFormatting.ITALIC
+                                + new ChatComponentTranslation("ec3.txt.soulStone.imbued").getFormattedText()
+                        );
+                    }
                 }
             } else {
                 par3List.add(
@@ -160,15 +172,16 @@ public class ItemSoulStone extends Item {
                         + EnumChatFormatting.DARK_GRAY
                         + " LP");
             } catch (Exception e) {
-                par3List.add(
-                    EnumChatFormatting.DARK_GRAY
-                        + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
+//                par3List.add(
+//                    EnumChatFormatting.DARK_GRAY
+//                        + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
             }
-        } else if (par1ItemStack.getTagCompound() != null) {
-            par3List.add(
-                EnumChatFormatting.DARK_GRAY
-                    + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
         }
+//        else if (par1ItemStack.getTagCompound() != null) {
+//            par3List.add(
+//                EnumChatFormatting.DARK_GRAY
+//                    + new ChatComponentTranslation("ec3.txt.soulStone.inactive").getFormattedText());
+//        }
     }
 
     @SideOnly(Side.CLIENT)

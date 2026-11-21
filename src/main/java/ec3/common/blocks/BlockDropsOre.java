@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -28,6 +29,11 @@ public class BlockDropsOre extends Block {
     @Override
     public int getExpDrop(IBlockAccess p_149690_1_, int p_149690_5_, int p_149690_7_) {
         return MathHelper.getRandomIntegerInRange(rand, 0, 2);
+    }
+
+    @Override
+    public boolean canSilkHarvest(World world, EntityPlayer player, int x, int y, int z, int metadata) {
+        return true;
     }
 
     @Override

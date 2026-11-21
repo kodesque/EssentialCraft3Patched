@@ -12,10 +12,10 @@ public class BlockPos {
     public Block blk;
     public int metadata;
     public TileEntity blockTile;
-    public World wrld;
+    public World world;
 
     public BlockPos(World w, int posX, int posY, int posZ) {
-        wrld = w;
+        world = w;
         x = posX;
         y = posY;
         z = posZ;

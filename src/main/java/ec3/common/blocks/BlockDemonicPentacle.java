@@ -17,7 +17,7 @@ import ec3.common.tile.crafting.TileDemonicPentacle;
 public class BlockDemonicPentacle extends BlockContainer {
 
     public BlockDemonicPentacle() {
-        super(Material.rock);
+        super(Material.circuits);
         this.setBlockBounds(0, 0, 0, 1, 0.0625F, 1);
     }
 

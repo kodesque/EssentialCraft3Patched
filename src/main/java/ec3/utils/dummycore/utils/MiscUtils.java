@@ -935,7 +935,7 @@ public class MiscUtils {
         } else {
             for (int i = 0; i < unbreakableBlocks.size(); ++i) {
                 BlockPos pos = unbreakableBlocks.get(i);
-                if (pos.x == x && pos.y == y && pos.z == z && pos.wrld.provider.dimensionId == w.provider.dimensionId) {
+                if (pos.x == x && pos.y == y && pos.z == z && pos.world.provider.dimensionId == w.provider.dimensionId) {
                     unbreakableBlocks.remove(pos);
                     break;
                 }
@@ -955,7 +955,7 @@ public class MiscUtils {
     public static boolean isBlockUnbreakable(World w, int x, int y, int z) {
         for (int i = 0; i < unbreakableBlocks.size(); ++i) {
             BlockPos pos = unbreakableBlocks.get(i);
-            if (pos.x == x && pos.y == y && pos.z == z && pos.wrld.provider.dimensionId == w.provider.dimensionId)
+            if (pos.x == x && pos.y == y && pos.z == z && pos.world.provider.dimensionId == w.provider.dimensionId)
                 return true;
         }
         return false;

@@ -94,6 +94,11 @@ public class ECRecipes {
 
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
+                new ItemStack(ECBlocks.darknessObelisk),
+                new Object[] { "VOV", "VMV", "VOV", 'V', ECBlocks.voidStone, 'O', gen(31), 'M', new ItemStack(ECItems.storage, 1, 4) }));
+
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
                 new ItemStack(ECBlocks.blockPale, 1, 0),
                 new Object[] { "ISI", "SES", "ISI", 'I', getItemByNameEC3("genericItem", 39), 'S', Blocks.lapis_block,
                     'E', getItemByNameEC3("genericItem", 38) }));
@@ -1642,8 +1647,8 @@ public class ECRecipes {
             .addRecipe(new ItemStack(Items.slime_ball, 1, 0), new ItemStack(Items.sugar, 3, 0), 16, 4);
         MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.egg, 1, 0), new ItemStack(Items.bone, 2, 0), 48, 9);
         MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.bone, 1, 0), new ItemStack(Items.egg, 9, 0), 48, 2);
-        MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 0), new ItemStack(Items.skull, 1, 1), 64, 3);
-        MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 1), new ItemStack(Items.skull, 3, 2), 64, 1);
+        MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 0), new ItemStack(Items.skull, 1, 1), 64, 1);
+        MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 1), new ItemStack(Items.skull, 1, 2), 64, 1);
         MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 2), new ItemStack(Items.skull, 1, 3), 64, 1);
         MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 3), new ItemStack(Items.skull, 1, 4), 64, 1);
         MithrilineFurnaceRecipes.addRecipe(new ItemStack(Items.skull, 1, 4), new ItemStack(Items.skull, 1, 0), 64, 1);

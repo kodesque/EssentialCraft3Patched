@@ -10,10 +10,10 @@ import net.minecraft.world.World;
 import ec3.common.tile.consumers.TilePlayerPentacle;
 import ec3.root.EssentialCraftCore;
 
-public class BlockPlayerPentacle extends BlockContainer {
+public class BlockSoulPentacle extends BlockContainer {
 
-    public BlockPlayerPentacle() {
-        super(Material.rock);
+    public BlockSoulPentacle() {
+        super(Material.circuits);
         this.setBlockBounds(0, 0, 0, 1, 0.0625F, 1);
     }
 
@@ -36,7 +36,6 @@ public class BlockPlayerPentacle extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World var1, int var2) {
-        // TODO Auto-generated method stub
         return new TilePlayerPentacle();
     }
 

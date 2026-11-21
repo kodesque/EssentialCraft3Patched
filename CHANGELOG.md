@@ -1,4 +1,23 @@
-# Essential Craft 3.5 Changelog
+# Essential Craft 3 Changelog
+
+## 4.7.3
+
+---
+
+### Added:
+- Soul Stone wind attunement tooltip
+- Darkness Obelisk crafting recipe
+
+### Changed:
+- Skeleton-wither skulls transmutation recipe: 3:1 -> 1:1
+
+### Fixed:
+- Soul Stone receiving a Blood Magic tooltip when no BM is found
+- Soul Stone tooltip formatting
+- Elemental Drops Ore being not affected by Fortune
+- Holy/Frozen maces dealing full damage without energy
+- Soul/demonic/wind pentacles being destroyed when broken with hand
+
 ## 4.7.2
 
 ---

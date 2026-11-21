@@ -99,7 +99,7 @@ public class ItemChaosFork extends ItemSword implements IItemRequiresMRU {
 
     @Override
     public int getMaxMRU(ItemStack stack) {
-        // TODO Auto-generated method stub
+
         return this.maxMRU;
     }
 

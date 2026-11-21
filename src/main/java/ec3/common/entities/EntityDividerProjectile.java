@@ -23,7 +23,6 @@ public class EntityDividerProjectile extends EntitySnowball {
                 this.posX,
                 this.posY,
                 this.posZ,
-                0,
                 2,
                 this.getThrower());
             if (!this.worldObj.isRemote) this.worldObj.spawnEntityInWorld(div);

@@ -313,7 +313,6 @@ public class EntityHologram extends EntityLiving implements IBossDisplayData {
                                         p.posY,
                                         p.posZ,
                                         damage,
-                                        2,
                                         this);
                                     this.worldObj.spawnEntityInWorld(d);
                                 }

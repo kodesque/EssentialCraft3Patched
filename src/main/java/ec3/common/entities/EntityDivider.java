@@ -8,6 +8,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class EntityDivider extends Entity {
@@ -21,15 +22,16 @@ public class EntityDivider extends Entity {
         this.setPositionAndRotation(x, y, z, 0, 0);
     }
 
-    public EntityDivider(World w, double x, double y, double z, double damage, double delay, EntityLivingBase base) {
+    public EntityDivider(World w, double x, double y, double z, double delay, EntityLivingBase base) {
         this(w, x, y, z);
-        this.damage = damage;
         this.delay = delay;
+        this.attacker = base;
     }
 
     public EntityLivingBase attacker;
-    public double delay = 2;
-    public double damage = 1;
+    double delay = 2;
+
+    public static final float DAMAGE = 2;
     public static final double RANGE = 3;
 
     @Override
@@ -41,13 +43,11 @@ public class EntityDivider extends Entity {
     @Override
     protected void readEntityFromNBT(NBTTagCompound tag) {
         delay = tag.getDouble("delay");
-        damage = tag.getDouble("damage");
     }
 
     @Override
     protected void writeEntityToNBT(NBTTagCompound tag) {
         tag.setDouble("delay", delay);
-        tag.setDouble("damage", damage);
     }
 
     @SuppressWarnings("unchecked")
@@ -77,11 +77,11 @@ public class EntityDivider extends Entity {
 
                 if (elb instanceof EntityHologram) continue;
 
-                if (elb.getDistanceToEntity(this) > 3) continue;
+                if (elb.getDistanceToEntity(this) > RANGE) continue;
 
                 if (this.worldObj.isRemote) return;
 
-                elb.setHealth(elb.getHealth() / 2);
+                elb.attackEntityFrom(DamageSource.magic, elb.getHealth() / DAMAGE);
                 elb.addPotionEffect(new PotionEffect(Potion.weakness.id, 200, 4, true));
                 elb.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 200, 4, true));
                 elb.addPotionEffect(new PotionEffect(Potion.digSlowdown.id, 200, 4, true));

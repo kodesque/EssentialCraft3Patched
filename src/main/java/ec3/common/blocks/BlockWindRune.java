@@ -12,7 +12,7 @@ import ec3.common.tile.crafting.TileWindRune;
 public class BlockWindRune extends BlockContainer {
 
     public BlockWindRune() {
-        super(Material.rock);
+        super(Material.circuits);
         this.setBlockBounds(0, 0, 0, 1, 0.0625F, 1);
     }
 
@@ -35,7 +35,6 @@ public class BlockWindRune extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World var1, int var2) {
-        // TODO Auto-generated method stub
         return new TileWindRune();
     }
 

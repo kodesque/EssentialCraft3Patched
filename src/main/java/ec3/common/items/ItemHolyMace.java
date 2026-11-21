@@ -104,13 +104,14 @@ public class ItemHolyMace extends ItemSword implements IItemRequiresMRU/* ItemSt
         return this.maxMRU;
     }
 
-    public boolean hitEntity(ItemStack p_77644_1_, EntityLivingBase p_77644_2_, EntityLivingBase p_77644_3_) {
-        if (p_77644_3_ instanceof EntityPlayer) {
-            if ((ECUtils.tryToDecreaseMRUInStorage((EntityPlayer) p_77644_3_, -250) || this.setMRU(p_77644_1_, -250))) {
-                return true;
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
+        if (this.getMRU(stack) >= 250) {
+            if ((ECUtils.tryToDecreaseMRUInStorage(player, -250) || this.setMRU(stack, -250))) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override

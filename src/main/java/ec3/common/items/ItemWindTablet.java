@@ -2,11 +2,13 @@ package ec3.common.items;
 
 import java.util.List;
 
+import ec3.utils.dummycore.utils.BlockPos;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -16,6 +18,9 @@ import ec3.utils.WindUtils;
 import ec3.utils.dummycore.utils.math.MathUtils;
 
 public class ItemWindTablet extends ItemStoresMRUInNBT {
+
+    public static final String windName = "Owethanna Else Hugaida";
+    public static final int maxRelations = 3500;
 
     // 24
     public static String[] windMessages = new String[] { "A wind blow rotates around you...", // 0
@@ -51,117 +56,39 @@ public class ItemWindTablet extends ItemStoresMRUInNBT {
         this.bFull3D = false;
     }
 
-    /**
-     * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
-     */
-    public ItemStack onItemRightClick(ItemStack p_77659_1_, World p_77659_2_, EntityPlayer p_77659_3_) {
-        if ((ECUtils.tryToDecreaseMRUInStorage(p_77659_3_, -500) || this.setMRU(p_77659_1_, -500))) {
-            int currentWindRev = WindUtils.getPlayerWindRelations(p_77659_3_);
-            int maxWindRev = 3500;
-            String windName = "Owethanna Else Hugaida";
-            int revPos = MathUtils.pixelatedTextureSize(currentWindRev, maxWindRev, windName.length());
-            if (!p_77659_3_.worldObj.isRemote && revPos >= 22) {
-                if (p_77659_3_.capabilities.isCreativeMode) p_77659_3_.capabilities.isCreativeMode = false;
-                Block b = p_77659_3_.worldObj.getBlock(
-                    MathHelper.floor_double(p_77659_3_.posX),
-                    MathHelper.floor_double(p_77659_3_.posY),
-                    MathHelper.floor_double(p_77659_3_.posZ));
 
-                if (b instanceof BlockPortal) {
-                    int x = MathHelper.floor_double(p_77659_3_.posX);
-                    int y = MathHelper.floor_double(p_77659_3_.posY);
-                    int z = MathHelper.floor_double(p_77659_3_.posZ);
-                    int i = 0;
 
-                    while (p_77659_3_.worldObj.getBlock(x + i, y, z) instanceof BlockPortal) {
-                        int j = 0;
-                        while (p_77659_3_.worldObj.getBlock(x + i, y + j, z) instanceof BlockPortal) {
-                            int k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x + i, y + j, z + k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x + i, y + j, z + k);
-                                p_77659_3_.worldObj.setBlock(x + i, y + j, z + k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x + i, y + j, z - k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x + i, y + j, z - k);
-                                p_77659_3_.worldObj.setBlock(x + i, y + j, z - k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            ++j;
-                        }
-                        j = 0;
-                        while (p_77659_3_.worldObj.getBlock(x + i, y - j, z) instanceof BlockPortal) {
-                            int k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x + i, y - j, z + k) == Blocks.portal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x + i, y - j, z + k);
-                                p_77659_3_.worldObj.setBlock(x + i, y - j, z + k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x + i, y - j, z - k) == Blocks.portal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x + i, y + j, z - k);
-                                p_77659_3_.worldObj.setBlock(x + i, y - j, z - k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            ++j;
-                        }
-                        ++i;
-                    }
-                    i = 0;
-                    while (p_77659_3_.worldObj.getBlock(x - i, y, z) instanceof BlockPortal) {
-                        int j = 0;
-                        while (p_77659_3_.worldObj.getBlock(x - i, y + j, z) instanceof BlockPortal) {
-                            int k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x - i, y + j, z + k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x - i, y + j, z + k);
-                                p_77659_3_.worldObj.setBlock(x - i, y + j, z + k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x - i, y + j, z - k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x - i, y + j, z - k);
-                                p_77659_3_.worldObj.setBlock(x - i, y + j, z - k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            ++j;
-                        }
-                        j = 0;
-                        while (p_77659_3_.worldObj.getBlock(x - i, y - j, z) instanceof BlockPortal) {
-                            int k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x - i, y - j, z + k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x - i, y - j, z + k);
-                                p_77659_3_.worldObj.setBlock(x - i, y - j, z + k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            k = 0;
-                            while (p_77659_3_.worldObj.getBlock(x - i, y - j, z - k) instanceof BlockPortal) {
-                                int metadata = p_77659_3_.worldObj.getBlockMetadata(x - i, y - j, z - k);
-                                p_77659_3_.worldObj.setBlock(x - i, y - j, z - k, ECBlocks.portal, metadata, 2);
-                                ++k;
-                            }
-                            ++j;
-                        }
-                        ++i;
-                    }
+    public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
+        if ((ECUtils.tryToDecreaseMRUInStorage(player, -500) || this.setMRU(stack, -500))) {
+            int currentWindRev = WindUtils.getPlayerWindRelations(player);
+
+            int revPos = MathUtils.pixelatedTextureSize(currentWindRev, maxRelations, windName.length());
+            if (!world.isRemote && revPos >= 22) {
+
+                Block block = world.getBlock(x, y, z);
+
+                if (block.equals(Blocks.portal)) {
+
+                    int meta = world.getBlockMetadata(x, y, z);
+
+                    world.setBlock(x, y, z, ECBlocks.portal, meta, 1);
+                    return true;
                 }
-                // server.getConfigurationManager().transferPlayerToDimension((EntityPlayerMP) p_77659_3_, 53);
-                p_77659_3_.worldObj.playSoundAtEntity(p_77659_3_, "portal.trigger", 10, 0.01F);
             }
         }
-        return p_77659_1_;
+
+        return false;
     }
+
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         super.addInformation(par1ItemStack, par2EntityPlayer, par3List, par4);
         int currentWindRev = WindUtils.getPlayerWindRelations(par2EntityPlayer);
-        int maxWindRev = 3500;
-        String windName = "Owethanna Else Hugaida";
         String hidden = "??????????????????????";
-        int revPos = MathUtils.pixelatedTextureSize(currentWindRev, maxWindRev, windName.length());
-        par3List.add("Wind name:");
+        int revPos = MathUtils.pixelatedTextureSize(currentWindRev, maxRelations, windName.length());
+        par3List.add(new ChatComponentTranslation("ec3.txt.windTablet.name").getFormattedText());
         par3List.add(windName.substring(0, revPos) + hidden.substring(revPos));
     }
 

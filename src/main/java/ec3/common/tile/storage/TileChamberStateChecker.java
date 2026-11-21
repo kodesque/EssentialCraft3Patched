@@ -45,19 +45,19 @@ public class TileChamberStateChecker extends TileEntity implements IStructurePie
 
     @Override
     public UUID getUUID() {
-        // TODO Auto-generated method stub
+
         return uuid;
     }
 
     @Override
     public EnumStructureType getStructure() {
-        // TODO Auto-generated method stub
+
         return EnumStructureType.MRUCUContaigementChamber;
     }
 
     @Override
     public TileEntity structureController() {
-        // TODO Auto-generated method stub
+
         return controller;
     }
 
@@ -71,7 +71,7 @@ public class TileChamberStateChecker extends TileEntity implements IStructurePie
 
     @Override
     public boolean setMaxMRU(float f) {
-        // TODO Auto-generated method stub
+
         return false;
     }
 

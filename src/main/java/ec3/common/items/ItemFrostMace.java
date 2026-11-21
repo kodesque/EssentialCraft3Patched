@@ -3,6 +3,7 @@ package ec3.common.items;
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -149,6 +150,11 @@ public class ItemFrostMace extends ItemSword implements IItemRequiresMRU {
             return false;
         }
         return false;
+    }
+
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
+        return this.getMRU(stack) < 250;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

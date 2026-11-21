@@ -1409,7 +1409,9 @@ ec3.txt.soulStone.balance.frozen=Frost
 ec3.txt.soulStone.balance.magical=Magic
 ec3.txt.soulStone.balance.shade=SHADE
 ec3.txt.soulStone.tooPale=User's MRU Matrix is too pale to track...
-ec3.txt.soulStone.unactive=The owner's life network is pure and untouched...
+ec3.txt.soulStone.imbued=The user is bound to Wind!
+
+ec3.txt.windTablet.name=Wind's name:
 
 ### ARMOR
 
