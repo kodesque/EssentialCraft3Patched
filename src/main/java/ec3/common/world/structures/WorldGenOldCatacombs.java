@@ -2,6 +2,7 @@ package ec3.common.world.structures;
 
 import java.util.Random;
 
+import ec3.utils.ChestContentCorrected;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockLeaves;
@@ -11,7 +12,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.Vec3;
-import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -23,31 +23,31 @@ import ec3.utils.dummycore.utils.math.MathUtils;
 
 public class WorldGenOldCatacombs extends WorldGenerator {
 
-    public static final WeightedRandomChestContent[] generatedItems = new WeightedRandomChestContent[] {
-        new WeightedRandomChestContent(ECItems.titanite, 0, 8, 32, 20),
-        new WeightedRandomChestContent(ECItems.twinkling_titanite, 0, 2, 16, 10),
-        new WeightedRandomChestContent(ECItems.genericItem, 5, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 6, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 7, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 8, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 9, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 10, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 11, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 20, 1, 12, 10),
-        new WeightedRandomChestContent(ECItems.genericItem, 3, 1, 16, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 35, 1, 1, 6),
-        new WeightedRandomChestContent(ECItems.genericItem, 36, 1, 1, 6),
-        new WeightedRandomChestContent(ECItems.genericItem, 37, 1, 1, 6),
-        new WeightedRandomChestContent(ECItems.magicalSlag, 0, 1, 16, 70),
-        new WeightedRandomChestContent(ECItems.ember, 0, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 1, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 2, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 3, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 4, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 5, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 7, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.ember, 6, 1, 16, 10),
-        new WeightedRandomChestContent(ECItems.bauble, 0, 1, 1, 15) };
+    public static final ChestContentCorrected[] generatedItems = new ChestContentCorrected[] {
+        new ChestContentCorrected(ECItems.titanite, 0, 8, 32, 20),
+        new ChestContentCorrected(ECItems.twinkling_titanite, 0, 2, 16, 10),
+        new ChestContentCorrected(ECItems.genericItem, 5, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 6, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 7, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 8, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 9, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 10, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 11, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 20, 1, 12, 10),
+        new ChestContentCorrected(ECItems.genericItem, 3, 1, 16, 15),
+        new ChestContentCorrected(ECItems.genericItem, 35, 1, 1, 6),
+        new ChestContentCorrected(ECItems.genericItem, 36, 1, 1, 6),
+        new ChestContentCorrected(ECItems.genericItem, 37, 1, 1, 6),
+        new ChestContentCorrected(ECItems.magicalSlag, 0, 1, 16, 70),
+        new ChestContentCorrected(ECItems.ember, 0, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 1, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 2, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 3, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 4, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 5, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 7, 1, 16, 10),
+        new ChestContentCorrected(ECItems.ember, 6, 1, 16, 10),
+        new ChestContentCorrected(ECItems.bauble, 0, 1, 1, 15) };
 
     public int maxSizeTries = 100;
     public int corridorMinLength = 32;
@@ -95,7 +95,7 @@ public class WorldGenOldCatacombs extends WorldGenerator {
                 w.setBlock(x, y - 1, z, ECBlocks.voidStone);
                 TileEntityChest chest = (TileEntityChest) w.getTileEntity(x, y, z);
                 if (chest != null) {
-                    WeightedRandomChestContent
+                    ChestContentCorrected
                         .generateChestContents(w.rand, generatedItems, chest, w.rand.nextInt(12) + 6);
                     IInventory inv = chest;
                     for (int i = 0; i < inv.getSizeInventory(); ++i) {

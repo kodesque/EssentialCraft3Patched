@@ -2,6 +2,7 @@ package ec3.common.items;
 
 import java.util.List;
 
+import ec3.common.blocks.BlockHoannaPortal;
 import ec3.utils.dummycore.utils.BlockPos;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
@@ -9,6 +10,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.Direction;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -56,23 +59,55 @@ public class ItemWindTablet extends ItemStoresMRUInNBT {
         this.bFull3D = false;
     }
 
-
-
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
+
         if ((ECUtils.tryToDecreaseMRUInStorage(player, -500) || this.setMRU(stack, -500))) {
             int currentWindRev = WindUtils.getPlayerWindRelations(player);
 
             int revPos = MathUtils.pixelatedTextureSize(currentWindRev, maxRelations, windName.length());
-            if (!world.isRemote && revPos >= 22) {
-
+            if (!world.isRemote && revPos >= 22)
+            {
                 Block block = world.getBlock(x, y, z);
 
-                if (block.equals(Blocks.portal)) {
+                if (block == Blocks.portal)
+                {
+                    BlockHoannaPortal.Size size = new BlockHoannaPortal.Size(world, x, y, z, 1);
+                    BlockHoannaPortal.Size size1 = new BlockHoannaPortal.Size(world, x, y, z, 2);
 
-                    int meta = world.getBlockMetadata(x, y, z);
+                    if (size.isValid())
+                    {
+                        for (int widthIndex = 0; widthIndex < size.width; ++widthIndex)
+                        {
+                            int portalX = size.bottomLeft.posX + Direction.offsetX[size.widthDirection] * widthIndex;
+                            int portalZ = size.bottomLeft.posZ + Direction.offsetZ[size.widthDirection] * widthIndex;
 
-                    world.setBlock(x, y, z, ECBlocks.portal, meta, 1);
-                    return true;
+                            for (int heightIndex = 0; heightIndex < size.height; ++heightIndex)
+                            {
+                                int portalY = size.bottomLeft.posY + heightIndex;
+                                world.setBlockToAir(portalX, portalY, portalZ);
+                            }
+                        }
+
+                        BlockHoannaPortal.makePortal(world, x, y, z);
+                        return true;
+                    }
+                    else if (size1.isValid())
+                    {
+                        for (int widthIndex = 0; widthIndex < size1.width; ++widthIndex)
+                        {
+                            int portalX = size1.bottomLeft.posX + Direction.offsetX[size1.widthDirection] * widthIndex;
+                            int portalZ = size1.bottomLeft.posZ + Direction.offsetZ[size1.widthDirection] * widthIndex;
+
+                            for (int heightIndex = 0; heightIndex < size1.height; ++heightIndex)
+                            {
+                                int portalY = size1.bottomLeft.posY + heightIndex;
+                                world.setBlockToAir(portalX, portalY, portalZ);
+                            }
+                        }
+
+                        BlockHoannaPortal.makePortal(world, x, y, z);
+                        return true;
+                    }
                 }
             }
         }

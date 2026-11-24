@@ -19,9 +19,9 @@ import net.minecraft.world.World;
 
 public class ECExplosion extends Explosion {
 
-    private int field_77289_h = 16;
+    private int radius = 16;
     private World worldObj;
-    private Map<EntityPlayer, Vec3> field_77288_k = new HashMap<EntityPlayer, Vec3>();
+    private Map<EntityPlayer, Vec3> vectorMap = new HashMap<>();
 
     public ECExplosion(World p_i1948_1_, Entity p_i1948_2_, double p_i1948_3_, double p_i1948_5_, double p_i1948_7_,
         float p_i1948_9_) {
@@ -43,17 +43,17 @@ public class ECExplosion extends Explosion {
         double d6;
         double d7;
 
-        for (i = 0; i < this.field_77289_h; ++i) {
-            for (j = 0; j < this.field_77289_h; ++j) {
-                for (k = 0; k < this.field_77289_h; ++k) {
-                    if (i == 0 || i == this.field_77289_h - 1
+        for (i = 0; i < this.radius; ++i) {
+            for (j = 0; j < this.radius; ++j) {
+                for (k = 0; k < this.radius; ++k) {
+                    if (i == 0 || i == this.radius - 1
                         || j == 0
-                        || j == this.field_77289_h - 1
+                        || j == this.radius - 1
                         || k == 0
-                        || k == this.field_77289_h - 1) {
-                        double d0 = (double) ((float) i / ((float) this.field_77289_h - 1.0F) * 2.0F - 1.0F);
-                        double d1 = (double) ((float) j / ((float) this.field_77289_h - 1.0F) * 2.0F - 1.0F);
-                        double d2 = (double) ((float) k / ((float) this.field_77289_h - 1.0F) * 2.0F - 1.0F);
+                        || k == this.radius - 1) {
+                        double d0 = (double) ((float) i / ((float) this.radius - 1.0F) * 2.0F - 1.0F);
+                        double d1 = (double) ((float) j / ((float) this.radius - 1.0F) * 2.0F - 1.0F);
+                        double d2 = (double) ((float) k / ((float) this.radius - 1.0F) * 2.0F - 1.0F);
                         double d3 = Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
                         d0 /= d3;
                         d1 /= d3;
@@ -141,7 +141,7 @@ public class ECExplosion extends Explosion {
     }
 
     public Map<EntityPlayer, Vec3> func_77277_b() {
-        return this.field_77288_k;
+        return this.vectorMap;
     }
 
     /**

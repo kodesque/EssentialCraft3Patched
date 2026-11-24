@@ -7,13 +7,13 @@ import net.minecraft.world.World;
 
 import ec3.common.tile.consumers.TileMRUCoilHardener;
 
-public class BlockMRUCoil_Hardener extends BlockContainer {
+public class BlockMRUCoilHardener extends BlockContainer {
 
-    protected BlockMRUCoil_Hardener(Material p_i45386_1_) {
+    protected BlockMRUCoilHardener(Material p_i45386_1_) {
         super(p_i45386_1_);
     }
 
-    public BlockMRUCoil_Hardener() {
+    public BlockMRUCoilHardener() {
         super(Material.rock);
     }
 

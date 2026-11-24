@@ -2,8 +2,8 @@ package ec3.common.world.structures;
 
 import java.util.Random;
 
+import ec3.utils.ChestContentCorrected;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -24,21 +24,21 @@ public class WorldGenDestroyedHouse extends WorldGenerator {
         rad = j;
     }
 
-    public static final WeightedRandomChestContent[] generatedItems = new WeightedRandomChestContent[] {
-        new WeightedRandomChestContent(ECItems.titanite, 0, 8, 64, 20),
-        new WeightedRandomChestContent(ECItems.twinkling_titanite, 0, 2, 16, 10),
-        new WeightedRandomChestContent(ECItems.genericItem, 5, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 6, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 7, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 8, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 9, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 10, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 11, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 20, 1, 12, 10),
-        new WeightedRandomChestContent(ECItems.genericItem, 3, 1, 64, 15),
-        new WeightedRandomChestContent(ECItems.genericItem, 35, 1, 1, 6),
-        new WeightedRandomChestContent(ECItems.genericItem, 36, 1, 1, 6),
-        new WeightedRandomChestContent(ECItems.genericItem, 37, 1, 1, 6) };
+    public static final ChestContentCorrected[] generatedItems = new ChestContentCorrected[] {
+        new ChestContentCorrected(ECItems.titanite, 0, 8, 64, 20),
+        new ChestContentCorrected(ECItems.twinkling_titanite, 0, 2, 16, 10),
+        new ChestContentCorrected(ECItems.genericItem, 5, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 6, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 7, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 8, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 9, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 10, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 11, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 20, 1, 12, 10),
+        new ChestContentCorrected(ECItems.genericItem, 3, 1, 64, 15),
+        new ChestContentCorrected(ECItems.genericItem, 35, 1, 1, 6),
+        new ChestContentCorrected(ECItems.genericItem, 36, 1, 1, 6),
+        new ChestContentCorrected(ECItems.genericItem, 37, 1, 1, 6) };
 
     public int getGroundToGenerate(World w, int x, int y, int z) {
         while (y > 5) {

@@ -20,13 +20,13 @@ import ec3.utils.dummycore.utils.MiscUtils;
 import ec3.utils.dummycore.utils.data.DataStorage;
 import ec3.utils.dummycore.utils.data.DummyData;
 
-public class BlockMRUCoil_Coil extends BlockContainer {
+public class BlockMRUCoil extends BlockContainer {
 
-    protected BlockMRUCoil_Coil(Material p_i45386_1_) {
+    protected BlockMRUCoil(Material p_i45386_1_) {
         super(p_i45386_1_);
     }
 
-    public BlockMRUCoil_Coil() {
+    public BlockMRUCoil() {
         super(Material.rock);
     }
 

@@ -1,6 +1,7 @@
 package ec3.common.init;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -31,6 +32,8 @@ public class ECRecipes {
     public boolean hasGregTech = false;
     @SuppressWarnings("unused")
     private Class<?> GT_Class;
+
+    public static ArrayList<ShapedOreRecipe> VirtualRegistry = new ArrayList();
 
     @SuppressWarnings("unchecked")
     public void main() {
@@ -587,11 +590,6 @@ public class ECRecipes {
                 new Object[] { "SSS", "SBR", "SSS", 'S', ECBlocks.fortifiedStone, 'R', "dustRedstone", 'B',
                     ECItems.bound_gem }));
         GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECBlocks.blockBreaker, 1, 0),
-                new Object[] { "SSS", "SRP", "SSS", 'S', ECBlocks.fortifiedStone, 'R', "dustRedstone", 'P',
-                    ECItems.weak_elemental_pick }));
-        GameRegistry.addRecipe(
             new ShapelessOreRecipe(
                 new ItemStack(ECBlocks.rightClicker, 1, 1),
                 new Object[] { new ItemStack(ECBlocks.rightClicker, 1, 0), new ItemStack(Items.slime_ball, 1, 0) }));
@@ -688,14 +686,56 @@ public class ECRecipes {
             .addShapelessRecipe(new ItemStack(ECBlocks.weaponMaker, 1, 3), new ItemStack(ECBlocks.weaponMaker, 1, 2));
         GameRegistry
             .addShapelessRecipe(new ItemStack(ECBlocks.weaponMaker, 1, 0), new ItemStack(ECBlocks.weaponMaker, 1, 3));
+
+        //here
+
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.soulScriber, 1, 0),
+                new Object[] { " N ", " Q ", " S ", 'N', Items.netherbrick, 'S', "stickWood", 'Q', Items.quartz }));
+
         GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.soulScriber, 1, 0),
+                new Object[] { "N", "Q", "S", 'N', Items.netherbrick, 'S', "stickWood", 'Q', Items.quartz })
+        );
+
+
+        //here end
+
+        //here
+
+        VirtualRegistry.add(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_elemental_hoe, 1, 0),
                 new Object[] { "DD ", " S ", " S ", 'D', "gemWind", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
+        VirtualRegistry.add(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_elemental_axe, 1, 0),
                 new Object[] { "DD ", "DS ", " S ", 'D', "gemWind", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.wind_elemental_pick, 1, 0),
+                new Object[] { "DDD", " S ", " S ", 'D', "gemWind", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.wind_elemental_shovel, 1, 0),
+                new Object[] { " D ", " S ", " S ", 'D', "gemWind", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.wind_elemental_sword, 1, 0),
+                new Object[] { " D ", " D ", " S ", 'D', "gemWind", 'S', "stickWood" }));
+
+        //here break
+
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.wind_elemental_hoe, 1, 0),
+                new Object[] { "DD", "S ", "S ", 'D', "gemWind", 'S', "stickWood" }));
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.wind_elemental_axe, 1, 0),
+                new Object[] { "DD", "DS", " S", 'D', "gemWind", 'S', "stickWood" }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_elemental_pick, 1, 0),
@@ -703,24 +743,45 @@ public class ECRecipes {
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_elemental_shovel, 1, 0),
-                new Object[] { " D ", " S ", " S ", 'D', "gemWind", 'S', "stickWood" }));
+                new Object[] { "D", "S", "S", 'D', "gemWind", 'S', "stickWood" }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_elemental_sword, 1, 0),
-                new Object[] { " D ", " D ", " S ", 'D', "gemWind", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
+                new Object[] { "D", "D", "S", 'D', "gemWind", 'S', "stickWood" }));
+        //here end
+
+        //here
+        VirtualRegistry.add(
             new ShapedOreRecipe(
-                new ItemStack(ECItems.soulScriber, 1, 0),
-                new Object[] { "N", "Q", "S", 'N', Items.netherbrick, 'S', "stickWood", 'Q', Items.quartz }));
+                new ItemStack(ECItems.weak_elemental_hoe, 1, 0),
+                new Object[] { "DD ", " S ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.weak_elemental_axe, 1, 0),
+                new Object[] { "DD ", "DS ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.weak_elemental_pick, 1, 0),
+                new Object[] { "DDD", " S ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.weak_elemental_shovel, 1, 0),
+                new Object[] { " D ", " S ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.weak_elemental_sword, 1, 0),
+                new Object[] { " D ", " D ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+
+        //here break
 
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.weak_elemental_hoe, 1, 0),
-                new Object[] { "DD ", " S ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+                new Object[] { "DD", "S ", "S ", 'D', "blockElemental", 'S', "stickWood" }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.weak_elemental_axe, 1, 0),
-                new Object[] { "DD ", "DS ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+                new Object[] { "DD", "DS", " S", 'D', "blockElemental", 'S', "stickWood" }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.weak_elemental_pick, 1, 0),
@@ -728,11 +789,60 @@ public class ECRecipes {
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.weak_elemental_shovel, 1, 0),
-                new Object[] { " D ", " S ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+                new Object[] { "D", "S", "S", 'D', "blockElemental", 'S', "stickWood" }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.weak_elemental_sword, 1, 0),
-                new Object[] { " D ", " D ", " S ", 'D', "blockElemental", 'S', "stickWood" }));
+                new Object[] { "D", "D", "S", 'D', "blockElemental", 'S', "stickWood" }));
+        //here end
+
+        //here
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_hoe, 1, 0),
+                new Object[] { "DD ", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_axe, 1, 0),
+                new Object[] { "DD ", "DS ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_pick, 1, 0),
+                new Object[] { "DDD", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_shovel, 1, 0),
+                new Object[] { " D ", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        VirtualRegistry.add(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_sword, 1, 0),
+                new Object[] { " D ", " D ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+
+        //here break
+
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_hoe, 1, 0),
+                new Object[] { "DD", "S ", "S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_axe, 1, 0),
+                new Object[] { "DD", "DS", " S", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_pick, 1, 0),
+                new Object[] { "DDD", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_shovel, 1, 0),
+                new Object[] { "D", "S", "S", 'D', "resonatingCrystal", 'S', "stickWood" }));
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECItems.elemental_sword, 1, 0),
+                new Object[] { "D", "D", "S", 'D', "resonatingCrystal", 'S', "stickWood" }));
+
+        //here end
+
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECItems.wind_helmet, 1, 0),
@@ -751,6 +861,11 @@ public class ECRecipes {
                 new Object[] { "D D", "D D", 'D', "gemWind" }));
 
         // TODO 4.6 Recipes
+        GameRegistry.addRecipe(
+            new ShapedOreRecipe(
+                new ItemStack(ECBlocks.blockBreaker, 1, 0),
+                new Object[] { "SSS", "SRP", "SSS", 'S', ECBlocks.fortifiedStone, 'R', "dustRedstone", 'P',
+                    ECItems.weak_elemental_pick }));
         GameRegistry.addRecipe(
             new ShapedOreRecipe(
                 new ItemStack(ECBlocks.chest, 1, 0),
@@ -902,26 +1017,6 @@ public class ECRecipes {
                 "worldInteractor", "elementalCore", "conversionMatrix", "plateMagic",
                 new ItemStack(ECItems.matrixProj, 1, 3), "plateMagic", });
         // TODO assembler Recipes
-        GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECItems.elemental_hoe, 1, 0),
-                new Object[] { "DD ", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECItems.elemental_axe, 1, 0),
-                new Object[] { "DD ", "DS ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECItems.elemental_pick, 1, 0),
-                new Object[] { "DDD", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECItems.elemental_shovel, 1, 0),
-                new Object[] { " D ", " S ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
-        GameRegistry.addRecipe(
-            new ShapedOreRecipe(
-                new ItemStack(ECItems.elemental_sword, 1, 0),
-                new Object[] { " D ", " D ", " S ", 'D', "resonatingCrystal", 'S', "stickWood" }));
 
         addRecipe(
             new ItemStack(ECItems.biomeWand, 1, 0),

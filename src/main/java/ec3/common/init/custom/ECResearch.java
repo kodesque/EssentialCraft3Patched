@@ -213,19 +213,19 @@ public class ECResearch {
                             .setText(StatCollector.translateToLocal("ec3.page.drops_5.txt")))
                     .appendPage(
                         new PageEntry("ec3.page.drops_6")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.weak_elemental_axe, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.weak_elemental_axe, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_7")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.weak_elemental_hoe, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.weak_elemental_hoe, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_8")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.weak_elemental_pick, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.weak_elemental_pick, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_9")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.weak_elemental_shovel, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.weak_elemental_shovel, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_10")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.weak_elemental_sword, 1, 0), 3)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.weak_elemental_sword, 1, 0))))
 
             )
             .apendDiscovery(
@@ -602,19 +602,19 @@ public class ECResearch {
                             .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.genericItem, 1, 31), 2)))
                     .appendPage(
                         new PageEntry("ec3.page.drops_6")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.elemental_axe, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.elemental_axe, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_7")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.elemental_hoe, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.elemental_hoe, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_8")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.elemental_pick, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.elemental_pick, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_9")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.elemental_shovel, 1, 0), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.elemental_shovel, 1, 0))))
                     .appendPage(
                         new PageEntry("ec3.page.drops_10")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.elemental_sword, 1, 0), 3))))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.elemental_sword, 1, 0)))))
             .apendDiscovery(
                 new DiscoveryEntry("ec3.disc.magicianTable").setReferal(new ItemStack(ECBlocks.magicianTable, 0, 0))
                     .setDisplayStack(new ItemStack(ECBlocks.magicianTable, 1, 0))
@@ -2529,19 +2529,19 @@ public class ECResearch {
                     .appendPage(next("windRune").setText(StatCollector.translateToLocal("ec3.page.windRune_4.txt")))
                     .appendPage(
                         next("windRune")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.wind_elemental_axe), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.wind_elemental_axe))))
                     .appendPage(
                         next("windRune")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.wind_elemental_pick), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.wind_elemental_pick))))
                     .appendPage(
                         next("windRune")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.wind_elemental_hoe), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.wind_elemental_hoe))))
                     .appendPage(
                         next("windRune")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.wind_elemental_shovel), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.wind_elemental_shovel))))
                     .appendPage(
                         next("windRune")
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.wind_elemental_sword), 2))))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.wind_elemental_sword)))))
             .apendDiscovery(
                 new DiscoveryEntry("playerPentacle")
 
@@ -2891,7 +2891,7 @@ public class ECResearch {
                     .appendPage(
                         next("demonicPentacle")
                             .setText(StatCollector.translateToLocal("ec3.page.demonicPentacle_3.txt"))
-                            .setRecipe(ECUtils.findRecipeByIS(new ItemStack(ECItems.soulScriber), 2)))
+                            .setRecipe(ECUtils.findShapedVirtualRecipe(new ItemStack(ECItems.soulScriber))))
 
             );
     }

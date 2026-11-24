@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.UUID;
 
+import ec3.common.init.ECRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -726,6 +727,16 @@ public class ECUtils {
                     .get(0) : null;
         }
         return null;
+    }
+
+    public static ShapedOreRecipe findShapedVirtualRecipe(ItemStack searched) {
+            for (int i = 0; i < ECRecipes.VirtualRegistry.size(); ++i) {
+                ShapedOreRecipe recipe = ECRecipes.VirtualRegistry.get(i);
+                    ItemStack output = recipe.getRecipeOutput();
+                    if (ItemStack.areItemStackTagsEqual(output, searched) && output.isItemEqual(searched))
+                        return copyShapedOreRecipe(recipe);
+            }
+            return null;
     }
 
     public static ShapelessOreRecipe copyShapelessOreRecipe(ShapelessOreRecipe recipe) {

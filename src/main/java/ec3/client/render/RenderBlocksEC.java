@@ -1,11 +1,14 @@
 package ec3.client.render;
 
+import ec3.common.blocks.BlockHoannaPortal;
+import ec3.utils.dummycore.utils.TimerHijack;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
@@ -65,8 +68,8 @@ import ec3.common.blocks.BlockHeatGenerator;
 import ec3.common.blocks.BlockMIM;
 import ec3.common.blocks.BlockMINEjector;
 import ec3.common.blocks.BlockMINInjector;
-import ec3.common.blocks.BlockMRUCoil_Coil;
-import ec3.common.blocks.BlockMRUCoil_Hardener;
+import ec3.common.blocks.BlockMRUCoil;
+import ec3.common.blocks.BlockMRUCoilHardener;
 import ec3.common.blocks.BlockMRULevitator;
 import ec3.common.blocks.BlockMRUReactor;
 import ec3.common.blocks.BlockMRUSpreader;
@@ -114,6 +117,7 @@ public class RenderBlocksEC implements ISimpleBlockRenderingHandler {
 
             GL11.glPopMatrix();
         }
+
         if (block instanceof BlockChestEC) {
             GL11.glPushMatrix();
             GL11.glRotated(180, 1, 0, 0);
@@ -425,7 +429,7 @@ public class RenderBlocksEC implements ISimpleBlockRenderingHandler {
             RenderColdDistillator.model.renderAll();
             GL11.glPopMatrix();
         }
-        if (block instanceof BlockMRUCoil_Hardener) {
+        if (block instanceof BlockMRUCoilHardener) {
             GL11.glPushMatrix();
             GL11.glTranslatef(0F, -0.5F, 0F);
             Minecraft.getMinecraft().renderEngine.bindTexture(RenderMRUCoilHardener.textures);
@@ -910,7 +914,7 @@ public class RenderBlocksEC implements ISimpleBlockRenderingHandler {
                 -0.05F);
             GL11.glPopMatrix();
         }
-        if (block instanceof BlockMRUCoil_Coil) {
+        if (block instanceof BlockMRUCoil) {
             renderInventoryBlockWithSize(
                 renderer,
                 Blocks.glass,
@@ -1478,6 +1482,7 @@ public class RenderBlocksEC implements ISimpleBlockRenderingHandler {
                 }
             }
         }
+
         if (block instanceof BlockDrops) {
             switch (metadata) {
                 case 0: {
@@ -1856,7 +1861,7 @@ public class RenderBlocksEC implements ISimpleBlockRenderingHandler {
             renderer.renderAllFaces = false;
         }
 
-        if (block instanceof BlockMRUCoil_Coil) {
+        if (block instanceof BlockMRUCoil) {
             renderer.renderAllFaces = true;
             renderer.setOverrideBlockTexture(Blocks.end_portal_frame.getIcon(1, 0));
             renderer.setRenderBounds(0.3D, 0.0D, 0.3D, 0.7D, 0.2D, 0.7D);

@@ -11,6 +11,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
@@ -173,6 +174,17 @@ public class ItemElementalSword extends ItemSword implements IItemRequiresMRU /*
             }
             if (embers.contains("Greater Hunger")) {
                 par2EntityLivingBase.addPotionEffect(new PotionEffect(Potion.hunger.id, 60, 1));
+            }
+
+            if (embers.contains("Conjuring")) {
+                par2EntityLivingBase.setPosition(0, -100, 0);
+
+                EntitySheep sheep = new EntitySheep(par2EntityLivingBase.worldObj);
+                par2EntityLivingBase.worldObj.spawnEntityInWorld(sheep);
+            }
+
+            if (embers.contains("Burning")) {
+                par2EntityLivingBase.setFire(5);
             }
         }
         // par2EntityLivingBase.attackEntityFrom(DamageSource.causeMobDamage(par3EntityLivingBase),damage);
@@ -471,6 +483,16 @@ public class ItemElementalSword extends ItemSword implements IItemRequiresMRU /*
         if (allEmbers.contains("magic") && allEmbers.contains("flame")) {
             ret.add("Damage +6");
         }
+
+        //adding the missing ones
+        if (allEmbers.contains("flame") && allEmbers.contains("divine")) {
+            ret.add("Burning");
+        }
+
+        if (allEmbers.contains("magic") && allEmbers.contains("divine")) {
+            ret.add("Conjuring");
+        }
+
         return ret;
     }
 

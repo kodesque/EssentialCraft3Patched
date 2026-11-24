@@ -1,5 +1,22 @@
 # Essential Craft 3 Changelog
 
+## 4.7.4
+
+---
+
+### Added:
+- Particles upon Hoanna portal activation
+- Two new Elemental Sword effects
+- (Book of Knowledge) Clarification on Embers of the same type giving no result
+
+### Changed:
+- Hoanna portal activation: no need to stand inside to convert
+- Decreased the amount of loot in Hoanna's chests by 5 times
+
+### Fixed:
+- Tool recipes being center-locked
+- (Book of Knowledge) Soul Scriber recipe being displayed incorrectly
+
 ## 4.7.3
 
 ---
@@ -14,9 +31,10 @@
 ### Fixed:
 - Soul Stone receiving a Blood Magic tooltip when no BM is found
 - Soul Stone tooltip formatting
-- Elemental Drops Ore being not affected by Fortune
+- Elemental Drops Ore being not affected by Silk Touch
 - Holy/Frozen maces dealing full damage without energy
 - Soul/demonic/wind pentacles being destroyed when broken with hand
+- Divider's Gun spheres dealing damage to the attacker
 
 ## 4.7.2
 
@@ -27,7 +45,7 @@
 - Unhardcoded Soul Stone tooltip strings
 - MRU Radiation potion icon texture
 - Made all balance names use adjectives
-- Elemental Ore is now affected by fortune enchantment
+- Elemental Ore is now affected by Fortune enchantment
 - MRUCU Moving Wands now break 2 times slower
 
 ### Fixed:

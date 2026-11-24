@@ -39,8 +39,8 @@ import ec3.common.blocks.BlockFurnaceMagic;
 import ec3.common.blocks.BlockHeatGenerator;
 import ec3.common.blocks.BlockHologramSpawner;
 import ec3.common.blocks.BlockMIMScreen;
-import ec3.common.blocks.BlockMRUCoil_Coil;
-import ec3.common.blocks.BlockMRUCoil_Hardener;
+import ec3.common.blocks.BlockMRUCoil;
+import ec3.common.blocks.BlockMRUCoilHardener;
 import ec3.common.blocks.BlockMRULevitator;
 import ec3.common.blocks.BlockMRUReactor;
 import ec3.common.blocks.BlockMRUSpreader;
@@ -550,7 +550,7 @@ public class ECBlocks {
             .setBlockTextureName("essentialcraft:palePlatingBlock");
         BlocksRegistry.registerBlock(platingPale, "platingPale", EssentialCraftCore.class, ItemBlockGeneric.class);
         mruCoilHardener = registerBlockSimple(
-            BlockMRUCoil_Hardener.class,
+            BlockMRUCoilHardener.class,
             Material.rock,
             mruCoilHardener,
             "mruCoilHardener",
@@ -559,7 +559,7 @@ public class ECBlocks {
             100,
             0);
         mruCoil = registerBlockSimple(
-            BlockMRUCoil_Coil.class,
+            BlockMRUCoil.class,
             Material.rock,
             mruCoil,
             "mruCoil",
